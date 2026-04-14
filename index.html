@@ -16,7 +16,7 @@ nav{display:flex;align-items:center;justify-content:space-between;padding:0 5%;h
 .nav-links a:hover{color:var(--navy)}
 .nav-cta{background:var(--blue);color:#fff;padding:9px 20px;border-radius:8px;font-size:14px;font-weight:500;text-decoration:none;transition:background 0.15s}
 .nav-cta:hover{background:var(--navy);color:#fff}
-.hero{background:linear-gradient(160deg,var(--navy) 0%,#1a3a6e 60%,#1565C0 100%);padding:80px 5% 72px;display:flex;align-items:center;gap:48px;min-height:520px;position:relative;overflow:hidden}
+.hero{background:linear-gradient(160deg,var(--navy) 0%,#1a3a6e 60%,#1565C0 100%);padding:80px 5% 72px;display:flex;align-items:center;gap:48px;min-height:860px;position:relative;overflow:hidden}
 .hero::before{content:'';position:absolute;right:-80px;top:-80px;width:500px;height:500px;border-radius:50%;background:rgba(41,182,246,0.08)}
 .hero::after{content:'';position:absolute;right:10%;bottom:-120px;width:300px;height:300px;border-radius:50%;background:rgba(21,101,192,0.3)}
 .hero-left{flex:1;position:relative;z-index:1}
@@ -32,8 +32,8 @@ h1 span{color:var(--water)}
 .btn-primary:hover{background:#fff;color:var(--navy)}
 .btn-outline{background:rgba(255,255,255,0.1);color:#fff;border:1px solid rgba(255,255,255,0.3);padding:13px 26px;border-radius:9px;font-weight:500;font-size:15px;text-decoration:none;transition:all 0.15s}
 .btn-outline:hover{background:rgba(255,255,255,0.18)}
-.hero-right{flex:0 0 380px;position:relative;z-index:1}
-.hero-card{background:#fff;border-radius:var(--radius-lg);padding:28px;box-shadow:0 20px 60px rgba(0,0,0,0.25)}
+.hero-right{flex:0 0 420px;position:relative;z-index:1}
+.hero-card{background:#fff;border-radius:var(--radius-lg);padding:28px;box-shadow:0 20px 60px rgba(0,0,0,0.25);height:auto}
 .hero-card h3{font-size:18px;font-weight:600;color:var(--navy);margin-bottom:6px}
 .hero-card p{font-size:13px;color:var(--gray-500);margin-bottom:20px}
 .form-row{display:flex;flex-direction:column;gap:10px}
@@ -144,24 +144,24 @@ footer{background:var(--gray-900);padding:48px 5% 28px}
     <div class="hero-card">
       <h3>Get on the Spring List</h3>
       <p>We're booking April &amp; May fills now. Reserve your spot.</p>
-      <div class="form-row">
-        <div class="form-two">
-          <div class="form-field"><label>First Name</label><input type="text" placeholder="Andy" id="h-fname"></div>
-          <div class="form-field"><label>Last Name</label><input type="text" placeholder="Smith" id="h-lname"></div>
-        </div>
-        <div class="form-field"><label>Phone Number</label><input type="tel" placeholder="(317) 555-0100" id="h-phone"></div>
-        <div class="form-field">
-          <label>City</label>
-          <select id="h-city">
-            <option value="">Select your city...</option>
-            <option>Carmel</option><option>Fishers</option><option>Noblesville</option>
-            <option>Westfield</option><option>Zionsville</option><option>Whitestown</option><option>Other</option>
-          </select>
-        </div>
-        <button class="submit-btn" onclick="submitHeroForm()">Reserve My Spring Spot &rarr;</button>
-        <div class="success-msg" id="hero-success">You're on the list! We'll call to confirm your delivery window.</div>
-        <p class="form-note">No payment now. We'll call to confirm.</p>
-      </div>
+      <iframe
+        src="https://api.vission.ai/widget/form/8LXUUCk8Q94xfoVhmA0Y"
+        style="width:100%;height:750px;border:none;border-radius:3px"
+        id="inline-8LXUUCk8Q94xfoVhmA0Y"
+        data-layout="{'id':'INLINE'}"
+        data-trigger-type="alwaysShow"
+        data-trigger-value=""
+        data-activation-type="alwaysActivated"
+        data-activation-value=""
+        data-deactivation-type="neverDeactivate"
+        data-deactivation-value=""
+        data-form-name="Spring List - Hero"
+        data-height="750"
+        data-layout-iframe-id="inline-8LXUUCk8Q94xfoVhmA0Y"
+        data-form-id="8LXUUCk8Q94xfoVhmA0Y"
+        title="Spring List - Hero">
+      </iframe>
+      <script src="https://api.vission.ai/js/form_embed.js"></script>
     </div>
   </div>
 </section>
@@ -171,7 +171,7 @@ footer{background:var(--gray-900);padding:48px 5% 28px}
     <div class="trust-item"><svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Municipal-sourced water</div>
     <div class="trust-item"><svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Same-day availability</div>
     <div class="trust-item"><svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>Licensed &amp; insured drivers</div>
-    <div class="trust-item"><svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>5,000 gal capacity per load</div>
+    <div class="trust-item"><svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>4,000 gal capacity per load</div>
   </div>
 </div>
 
@@ -263,7 +263,7 @@ footer{background:var(--gray-900);padding:48px 5% 28px}
   <div class="pricing-grid">
     <div class="price-card">
       <div class="price-label">Standard</div><div class="price-name">Partial Fill</div>
-      <div class="price-desc">Top-offs, spa fills, or above-ground pools under 5,000 gal</div>
+      <div class="price-desc">Top-offs, spa fills, or above-ground pools under 4,000 gal</div>
       <div class="price-amount">$220 <span>/ load</span></div><div class="price-note">Up to 2,500 gallons</div>
       <ul class="price-features"><li>Municipal treated water</li><li>Same-day available</li><li>No minimum order</li><li>SMS confirmation</li></ul>
     </div>
@@ -271,7 +271,7 @@ footer{background:var(--gray-900);padding:48px 5% 28px}
       <div class="popular-badge">Most popular</div>
       <div class="price-label">Full Fill</div><div class="price-name">Pool Fill</div>
       <div class="price-desc">Full inground pool fills, vinyl liner installs, spring openings</div>
-      <div class="price-amount">$350 <span>/ load</span></div><div class="price-note">Up to 5,000 gallons per load</div>
+      <div class="price-amount">$350 <span>/ load</span></div><div class="price-note">Up to 4,000 gallons per load</div>
       <ul class="price-features"><li>Municipal treated water</li><li>Multi-load scheduling</li><li>Real-time driver tracking</li><li>Same-day available</li><li>SMS &amp; email confirmation</li></ul>
     </div>
     <div class="price-card">
@@ -281,8 +281,142 @@ footer{background:var(--gray-900);padding:48px 5% 28px}
       <ul class="price-features"><li>Year-round availability</li><li>Multi-load contracts</li><li>Invoiced billing available</li><li>Priority scheduling</li></ul>
     </div>
   </div>
-  <p style="text-align:center;font-size:13px;color:var(--gray-500);margin-top:20px">Emergency same-day surcharge: +$75. Most residential pools require 2–4 loads.</p>
+  <p style="text-align:center;font-size:13px;color:var(--gray-500);margin-top:20px">Emergency same-day surcharge: +$75. Most residential pools require 2–5 loads (4,000 gal per load).</p>
 </section>
+
+<section id="estimator" style="background:var(--gray-50);border-top:1px solid var(--border)">
+  <div style="max-width:680px;margin:0 auto">
+    <div class="section-label">Pool Calculator</div>
+    <div class="section-title">How Much Water Do You Need?</div>
+    <p class="section-sub" style="margin-bottom:32px">Enter your pool dimensions and we'll estimate your gallons, number of loads, and total cost — before you ever pick up the phone.</p>
+
+    <div style="background:var(--white);border:1px solid var(--border);border-radius:var(--radius-lg);padding:28px">
+
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:20px" id="shape-selector">
+        <div class="shape-btn active" onclick="setShape('rectangle',this)" style="border:1px solid var(--border);border-radius:var(--radius);padding:10px 6px;text-align:center;cursor:pointer;background:var(--white);transition:all 0.15s">
+          <div style="font-size:20px;margin-bottom:4px">▬</div>
+          <div style="font-size:11px;color:var(--gray-500)">Rectangle</div>
+        </div>
+        <div class="shape-btn" onclick="setShape('oval',this)" style="border:1px solid var(--border);border-radius:var(--radius);padding:10px 6px;text-align:center;cursor:pointer;background:var(--white);transition:all 0.15s">
+          <div style="font-size:20px;margin-bottom:4px">⬭</div>
+          <div style="font-size:11px;color:var(--gray-500)">Oval</div>
+        </div>
+        <div class="shape-btn" onclick="setShape('kidney',this)" style="border:1px solid var(--border);border-radius:var(--radius);padding:10px 6px;text-align:center;cursor:pointer;background:var(--white);transition:all 0.15s">
+          <div style="font-size:20px;margin-bottom:4px">◖</div>
+          <div style="font-size:11px;color:var(--gray-500)">Kidney</div>
+        </div>
+        <div class="shape-btn" onclick="setShape('lshape',this)" style="border:1px solid var(--border);border-radius:var(--radius);padding:10px 6px;text-align:center;cursor:pointer;background:var(--white);transition:all 0.15s">
+          <div style="font-size:20px;margin-bottom:4px">⌐</div>
+          <div style="font-size:11px;color:var(--gray-500)">L-Shape</div>
+        </div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px">
+        <div>
+          <label style="font-size:12px;font-weight:500;color:var(--gray-700);display:block;margin-bottom:4px">Length (ft)</label>
+          <input type="number" id="est-length" value="30" min="5" max="100" oninput="estCalc()" style="width:100%;border:1px solid var(--gray-300);border-radius:8px;padding:10px 13px;font-size:14px;font-family:inherit;color:var(--gray-900);background:var(--gray-50);outline:none;box-sizing:border-box">
+        </div>
+        <div>
+          <label style="font-size:12px;font-weight:500;color:var(--gray-700);display:block;margin-bottom:4px">Width (ft)</label>
+          <input type="number" id="est-width" value="15" min="5" max="60" oninput="estCalc()" style="width:100%;border:1px solid var(--gray-300);border-radius:8px;padding:10px 13px;font-size:14px;font-family:inherit;color:var(--gray-900);background:var(--gray-50);outline:none;box-sizing:border-box">
+        </div>
+        <div>
+          <label style="font-size:12px;font-weight:500;color:var(--gray-700);display:block;margin-bottom:4px">Shallow end depth (ft)</label>
+          <input type="number" id="est-shallow" value="3.5" min="1" max="6" step="0.5" oninput="estCalc()" style="width:100%;border:1px solid var(--gray-300);border-radius:8px;padding:10px 13px;font-size:14px;font-family:inherit;color:var(--gray-900);background:var(--gray-50);outline:none;box-sizing:border-box">
+        </div>
+        <div>
+          <label style="font-size:12px;font-weight:500;color:var(--gray-700);display:block;margin-bottom:4px">Deep end depth (ft)</label>
+          <input type="number" id="est-deep" value="8" min="4" max="14" step="0.5" oninput="estCalc()" style="width:100%;border:1px solid var(--gray-300);border-radius:8px;padding:10px 13px;font-size:14px;font-family:inherit;color:var(--gray-900);background:var(--gray-50);outline:none;box-sizing:border-box">
+        </div>
+      </div>
+
+      <div style="margin-bottom:20px">
+        <label style="font-size:12px;font-weight:500;color:var(--gray-700);display:block;margin-bottom:4px">Fill level: <span id="est-fill-label">100% — full pool</span></label>
+        <input type="range" id="est-fillpct" min="10" max="100" value="100" step="10" oninput="estUpdateFill();estCalc()" style="width:100%">
+      </div>
+
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:20px">
+        <div style="background:var(--blue-pale);border-radius:var(--radius);padding:14px 16px">
+          <div style="font-size:11px;font-weight:600;color:var(--blue);text-transform:uppercase;letter-spacing:0.8px;margin-bottom:4px">Gallons needed</div>
+          <div style="font-size:22px;font-weight:600;color:var(--navy)" id="est-gallons">13,500</div>
+        </div>
+        <div style="background:var(--blue-pale);border-radius:var(--radius);padding:14px 16px">
+          <div style="font-size:11px;font-weight:600;color:var(--blue);text-transform:uppercase;letter-spacing:0.8px;margin-bottom:4px">Loads needed</div>
+          <div style="font-size:22px;font-weight:600;color:var(--navy)" id="est-loads">4</div>
+        </div>
+        <div style="background:var(--blue-pale);border-radius:var(--radius);padding:14px 16px">
+          <div style="font-size:11px;font-weight:600;color:var(--blue);text-transform:uppercase;letter-spacing:0.8px;margin-bottom:4px">Est. cost</div>
+          <div style="font-size:22px;font-weight:600;color:var(--navy)" id="est-cost">$1,400</div>
+        </div>
+      </div>
+
+      <div style="margin-bottom:16px">
+        <div style="font-size:12px;font-weight:500;color:var(--gray-700);margin-bottom:8px">Load breakdown</div>
+        <div id="est-bar" style="display:flex;gap:6px;flex-wrap:wrap"></div>
+      </div>
+
+      <p id="est-note" style="font-size:12px;color:var(--gray-500);margin-bottom:16px;text-align:center"></p>
+
+      <a href="#book" class="btn-primary" style="display:flex;justify-content:center;text-decoration:none">
+        Book Your Delivery &rarr;
+      </a>
+      <p style="font-size:11px;color:var(--gray-500);text-align:center;margin-top:8px">Estimates assume a standard tapered pool floor. Actual volume may vary ±10%.</p>
+    </div>
+  </div>
+</section>
+
+<script>
+var estShape='rectangle';
+function setShape(s,el){
+  estShape=s;
+  document.querySelectorAll('.shape-btn').forEach(function(b){
+    b.style.border='1px solid var(--border)';
+    b.style.background='var(--white)';
+    b.querySelector('div:last-child').style.color='var(--gray-500)';
+  });
+  el.style.border='2px solid var(--blue)';
+  el.style.background='var(--blue-light)';
+  el.querySelector('div:last-child').style.color='var(--blue)';
+  estCalc();
+}
+function estUpdateFill(){
+  var v=parseInt(document.getElementById('est-fillpct').value);
+  document.getElementById('est-fill-label').textContent=v===100?'100% — full pool':v+'% capacity';
+}
+function estCalc(){
+  var L=parseFloat(document.getElementById('est-length').value)||0;
+  var W=parseFloat(document.getElementById('est-width').value)||0;
+  var shallow=parseFloat(document.getElementById('est-shallow').value)||0;
+  var deep=parseFloat(document.getElementById('est-deep').value)||0;
+  var fillPct=parseInt(document.getElementById('est-fillpct').value)/100;
+  var avgDepth=(shallow+deep)/2;
+  var sf={rectangle:1,oval:0.785,kidney:0.75,lshape:0.80}[estShape]||1;
+  var gal=Math.round(L*W*avgDepth*7.48*sf*fillPct/100)*100;
+  var fullLoads=Math.floor(gal/4000);
+  var remainder=gal%4000;
+  var totalLoads=fullLoads+(remainder>0?1:0);
+  var cost=fullLoads*350+(remainder>0?(remainder<=2000?220:350):0);
+  document.getElementById('est-gallons').textContent=gal.toLocaleString();
+  document.getElementById('est-loads').textContent=totalLoads;
+  document.getElementById('est-cost').textContent='$'+cost.toLocaleString();
+  var bar=document.getElementById('est-bar');
+  bar.innerHTML='';
+  for(var i=0;i<fullLoads;i++){
+    var p=document.createElement('span');
+    p.style.cssText='background:var(--blue);color:#fff;border-radius:20px;padding:4px 12px;font-size:12px;font-weight:500';
+    p.textContent='Load '+(i+1)+' — 4,000 gal';
+    bar.appendChild(p);
+  }
+  if(remainder>0){
+    var p2=document.createElement('span');
+    p2.style.cssText='background:var(--blue-light);color:var(--blue);border-radius:20px;padding:4px 12px;font-size:12px;font-weight:500';
+    p2.textContent='Load '+totalLoads+' — '+remainder.toLocaleString()+' gal';
+    bar.appendChild(p2);
+  }
+  document.getElementById('est-note').textContent=totalLoads>1?'Multi-load jobs scheduled same-day or across consecutive days depending on availability.':'Single-load fill — usually completed within 2 hours of scheduling.';
+}
+estCalc();
+</script>
 
 <section class="booking-section" id="book">
   <div class="booking-inner">
@@ -290,44 +424,24 @@ footer{background:var(--gray-900);padding:48px 5% 28px}
     <div class="section-title">Schedule Your Delivery</div>
     <p class="section-sub">Fill out the form and we'll reach out within the hour to confirm your window.</p>
     <div class="booking-form">
-      <div class="booking-form">
-  <iframe
-    src="https://api.vission.ai/widget/form/JBwWZcKhPnqlX34NZDE9"
-    style="width:100%;height:763px;border:none;border-radius:3px"
-    id="inline-JBwWZcKhPnqlX34NZDE9"
-    data-form-name="Book Delivery"
-    title="Book Delivery">
-  </iframe>
-  <script src="https://api.vission.ai/js/form_embed.js"></script>
- </div>
-        <div class="form-two">
-          <div class="form-field"><label>Phone</label><input type="tel" placeholder="(317) 555-0100" id="b-phone"></div>
-          <div class="form-field"><label>Email</label><input type="email" placeholder="you@email.com" id="b-email"></div>
-        </div>
-        <div class="form-field"><label>Street Address</label><input type="text" placeholder="123 Maple Dr, Carmel IN 46032" id="b-addr"></div>
-        <div class="form-two">
-          <div class="form-field">
-            <label>Service Type</label>
-            <select id="b-service">
-              <option value="">Select service...</option>
-              <option>Residential pool fill</option><option>Hot tub / spa fill</option>
-              <option>Pond / water feature</option><option>Commercial site water</option>
-            </select>
-          </div>
-          <div class="form-field">
-            <label>Approx. Pool Size</label>
-            <select id="b-size">
-              <option value="">Select size...</option>
-              <option>Under 10,000 gal</option><option>10,000–15,000 gal</option>
-              <option>15,000–20,000 gal</option><option>20,000–30,000 gal</option><option>30,000+ gal</option>
-            </select>
-          </div>
-        </div>
-        <div class="form-field"><label>Preferred Delivery Date</label><input type="date" id="b-date"></div>
-        <button class="submit-btn" onclick="submitBookingForm()">Request Delivery &rarr;</button>
-        <div class="success-msg" id="booking-success">Booking request received! We'll call you within the hour to confirm your window.</div>
-        <p class="form-note">No payment required. We'll confirm availability before charging anything.</p>
-      </div>
+      <iframe
+        src="https://api.vission.ai/widget/form/JBwWZcKhPnqlX34NZDE9"
+        style="width:100%;height:763px;border:none;border-radius:3px"
+        id="inline-JBwWZcKhPnqlX34NZDE9"
+        data-layout="{'id':'INLINE'}"
+        data-trigger-type="alwaysShow"
+        data-trigger-value=""
+        data-activation-type="alwaysActivated"
+        data-activation-value=""
+        data-deactivation-type="neverDeactivate"
+        data-deactivation-value=""
+        data-form-name="Book Delivery"
+        data-height="763"
+        data-layout-iframe-id="inline-JBwWZcKhPnqlX34NZDE9"
+        data-form-id="JBwWZcKhPnqlX34NZDE9"
+        title="Book Delivery">
+      </iframe>
+      <script src="https://api.vission.ai/js/form_embed.js"></script>
     </div>
   </div>
 </section>
@@ -335,8 +449,8 @@ footer{background:var(--gray-900);padding:48px 5% 28px}
 <footer>
   <div class="footer-top">
     <div>
-      <div class="footer-logo"><img src="logo.png" alt="Indy Bulk Water">
-        <p class="footer-tagline">Fast, clean bulk water delivery for pools, hot tubs, ponds, and commercial sites across Hamilton and Boone Counties.</p>
+      <div class="footer-logo"><img src="logo.png" alt="Indy Bulk Water"></div>
+      <p class="footer-tagline">Fast, clean bulk water delivery for pools, hot tubs, ponds, and commercial sites across Hamilton and Boone Counties.</p>
     </div>
     <div class="footer-col">
       <h4>Services</h4>
@@ -346,7 +460,7 @@ footer{background:var(--gray-900);padding:48px 5% 28px}
     <div class="footer-col">
       <h4>Contact</h4>
       <a href="#">(317) 000-0000</a>
-      <a href="#">info@indybulkwater.com</a>
+      <a href="#"><span class="__cf_email__" data-cfemail="bad3d4dcd5fad3d4dec3d8cfd6d1cddbcedfc894d9d5d7">[email&#160;protected]</span></a>
       <a href="#area">Service Area</a><a href="#book">Book Delivery</a>
     </div>
   </div>
@@ -356,28 +470,9 @@ footer{background:var(--gray-900);padding:48px 5% 28px}
   </div>
 </footer>
 
-<script>
-function submitHeroForm(){
-  var f=document.getElementById('h-fname').value;
-  var p=document.getElementById('h-phone').value;
-  var c=document.getElementById('h-city').value;
-  if(!f||!p||!c){alert('Please fill in all fields.');return;}
-  document.getElementById('hero-success').style.display='block';
-}
-function submitBookingForm(){
-  var f=document.getElementById('b-fname').value;
-  var p=document.getElementById('b-phone').value;
-  var s=document.getElementById('b-service').value;
-  if(!f||!p||!s){alert('Please fill in your name, phone, and service type.');return;}
-  document.getElementById('booking-success').style.display='block';
-}
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+
 document.querySelectorAll('a[href^="#"]').forEach(function(a){
   a.addEventListener('click',function(e){
     e.preventDefault();
-    var t=document.querySelector(this.getAttribute('href'));
-    if(t)t.scrollIntoView({behavior:'smooth'});
-  });
-});
-var d=document.getElementById('b-date');
-if(d){var n=new Date();n.setDate(n.getDate()+3);d.min=n.toISOString().split('T')[0];}
-</script>
+    var t=document.querySelector(this.getAttribute('
