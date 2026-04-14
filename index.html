@@ -208,6 +208,89 @@ footer{background:var(--gray-900);padding:48px 5% 28px}
   </div>
 </section>
 
+
+<section id="truck" style="background:var(--navy);overflow:hidden;padding:0">
+  <div style="display:grid;grid-template-columns:1fr 1fr;min-height:500px">
+    <div style="background:#000;display:flex;align-items:center;justify-content:center;overflow:hidden">
+      <img src="Truck.png" alt="Indy Bulk Water delivery truck" style="width:100%;height:100%;object-fit:cover;mix-blend-mode:lighten;display:block">
+    </div>
+    <div style="padding:56px 48px;display:flex;flex-direction:column;justify-content:center">
+      <div class="section-label" style="color:var(--water)">Our Truck</div>
+      <div class="section-title" style="color:#fff">4,000 Gallons. One Trip.</div>
+      <p style="font-size:16px;color:rgba(255,255,255,0.7);line-height:1.7;margin-bottom:24px">Our dedicated water hauler carries up to 4,000 gallons of clean, municipal-sourced water per load — the same water that comes out of your tap, treated to drinking water standards. We never haul anything else in this tank. Ever.</p>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
+        <div style="background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:var(--radius);padding:16px">
+          <div style="font-size:22px;font-weight:600;color:var(--water);margin-bottom:4px">4,000</div>
+          <div style="font-size:12px;color:rgba(255,255,255,0.55)">Gallons per load</div>
+        </div>
+        <div style="background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:var(--radius);padding:16px">
+          <div style="font-size:22px;font-weight:600;color:var(--water);margin-bottom:4px">Same day</div>
+          <div style="font-size:12px;color:rgba(255,255,255,0.55)">Ready to swim</div>
+        </div>
+        <div style="background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:var(--radius);padding:16px">
+          <div style="font-size:22px;font-weight:600;color:var(--water);margin-bottom:4px">300 ft</div>
+          <div style="font-size:12px;color:rgba(255,255,255,0.55)">Max hose reach</div>
+        </div>
+        <div style="background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:var(--radius);padding:16px">
+          <div style="font-size:22px;font-weight:600;color:var(--water);margin-bottom:4px">Water only</div>
+          <div style="font-size:12px;color:rgba(255,255,255,0.55)">Dedicated tank</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="faq" style="background:var(--white)">
+  <div style="max-width:760px;margin:0 auto">
+    <div class="section-label">FAQ</div>
+    <div class="section-title">Questions People Actually Ask</div>
+    <p class="section-sub" style="margin-bottom:40px">Everything you need to know before you book.</p>
+
+    <div style="background:#FFF3CD;border:1px solid #F0AD00;border-radius:var(--radius-lg);padding:20px 24px;margin-bottom:36px;display:flex;gap:16px;align-items:flex-start">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#856404" stroke-width="2" stroke-linecap="round" style="flex-shrink:0;margin-top:2px"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+      <div>
+        <div style="font-size:14px;font-weight:600;color:#856404;margin-bottom:4px">Vinyl liner pool owners — read this first</div>
+        <div style="font-size:13px;color:#856404;line-height:1.6">Never empty a vinyl liner pool without having a delivery truck scheduled for the same day. Vinyl liners shrink when exposed to air and will not stretch back to full size. Once you've cleaned the pool, put at least 4 inches of water back in immediately to keep the liner pressed against the wall.</div>
+      </div>
+    </div>
+
+    <div id="faq-list">
+    </div>
+  </div>
+</section>
+
+<script>
+var faqs=[
+  {q:"Why not just use my garden hose?",a:"A standard garden hose flows about 6 gallons per minute — that's 360 gallons per hour. A typical 15,000-gallon pool would take over 40 hours to fill. With our truck you get 4,000 gallons delivered in one shot. Most pools are swim-ready the same day we deliver."},
+  {q:"Where does the water come from?",a:"We source our water exclusively from local municipalities — the same treated water that comes out of your tap. It meets all Indiana state standards for drinking water quality."},
+  {q:"Is the water safe to swim in right away?",a:"Yes. Because it's already treated municipal water, you can often swim the same day. You'll still want to balance your pH and chlorine levels, but you won't need to wait days like you would with untreated well water."},
+  {q:"Does your truck haul anything besides water?",a:"Never. Our tank is dedicated to fresh water only. We do not haul fuel, fertilizer, chemicals, or anything else. What goes in your pool is exactly what we fill the tank with — clean municipal water."},
+  {q:"Do I need to be home during the delivery?",a:"No. We fill pools all the time while customers are at work. We just need clear access to your pool and payment arrangements made in advance. We'll text you when we're on the way and when we're done."},
+  {q:"Will the water pressure damage my pool or liner?",a:"No. We idle the pump during the first several inches of fill, then gradually increase flow. This protects vinyl liners from wrinkles and gives you time to smooth them out before the water gets too deep."},
+  {q:"How do you get the water to the pool?",a:"We run hose from the truck to your pool — up to 300 feet of reach. We're careful around landscaping, flowerbeds, and fencing. Most residential setups are straightforward."},
+  {q:"How many loads will my pool need?",a:"Use the pool calculator above to get an estimate. Most residential inground pools need 2 to 5 loads depending on size. Our calculator breaks it down by shape and depth."},
+  {q:"When should I book?",a:"In peak season (April through August) we recommend booking at least a week out. For spring openings, earlier is better — April slots fill fast. Same-day availability exists but carries a +$75 surcharge."},
+  {q:"How do I pay?",a:"We accept cash, check, and all major credit cards. Payment is due upon completion of the final load. No payment is required to book online."}
+];
+
+var list=document.getElementById('faq-list');
+faqs.forEach(function(f,i){
+  var item=document.createElement('div');
+  item.style.cssText='border-bottom:1px solid var(--border);overflow:hidden';
+  item.innerHTML='<button onclick="toggleFaq('+i+',this)" style="width:100%;text-align:left;background:none;border:none;padding:20px 0;display:flex;justify-content:space-between;align-items:center;cursor:pointer;font-family:inherit;font-size:16px;font-weight:500;color:var(--navy)">'+f.q+'<svg id="faq-icon-'+i+'" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" style="flex-shrink:0;transition:transform 0.2s;color:var(--blue)"><polyline points="6 9 12 15 18 9"/></svg></button><div id="faq-ans-'+i+'" style="display:none;padding:0 0 20px;font-size:15px;color:var(--gray-500);line-height:1.7">'+f.a+'</div>';
+  list.appendChild(item);
+});
+
+function toggleFaq(i,btn){
+  var ans=document.getElementById('faq-ans-'+i);
+  var icon=document.getElementById('faq-icon-'+i);
+  var open=ans.style.display==='block';
+  document.querySelectorAll('[id^="faq-ans-"]').forEach(function(a){a.style.display='none'});
+  document.querySelectorAll('[id^="faq-icon-"]').forEach(function(ic){ic.style.transform='rotate(0deg)'});
+  if(!open){ans.style.display='block';icon.style.transform='rotate(180deg)';}
+}
+</script>
+
 <section class="how-section" id="how">
   <div style="text-align:center">
     <div class="section-label">The Process</div>
