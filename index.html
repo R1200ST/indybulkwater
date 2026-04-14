@@ -281,7 +281,7 @@ footer{background:var(--gray-900);padding:48px 5% 28px}
       <ul class="price-features"><li>Year-round availability</li><li>Multi-load contracts</li><li>Invoiced billing available</li><li>Priority scheduling</li></ul>
     </div>
   </div>
-  <p style="text-align:center;font-size:13px;color:var(--gray-500);margin-top:20px">Emergency same-day surcharge: +$75. Most residential pools require 2–5 loads (4,000 gal per load).</p>
+  <p style="text-align:center;font-size:13px;color:var(--gray-500);margin-top:20px">Emergency same-day surcharge: +$75. Most residential pools require 2&ndash;5 loads (4,000 gal per load).</p>
 </section>
 
 <section id="estimator" style="background:var(--gray-50);border-top:1px solid var(--border)">
@@ -404,7 +404,7 @@ function estCalc(){
   for(var i=0;i<fullLoads;i++){
     var p=document.createElement('span');
     p.style.cssText='background:var(--blue);color:#fff;border-radius:20px;padding:4px 12px;font-size:12px;font-weight:500';
-    p.textContent='Load '+(i+1)+' — 4,000 gal';
+    p.textContent='Load '+(i+1)+' - 4,000 gal';
     bar.appendChild(p);
   }
   if(remainder>0){
