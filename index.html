@@ -16,6 +16,8 @@ nav{display:flex;align-items:center;justify-content:space-between;padding:0 5%;h
 .nav-links a:hover{color:var(--navy)}
 .nav-cta{background:var(--blue);color:#fff !important;padding:9px 20px;border-radius:8px;font-size:14px;font-weight:600;text-decoration:none;transition:background 0.15s}
 .nav-cta:hover{background:var(--navy);color:#fff !important}
+.nav-cta-outline{background:transparent;color:var(--blue) !important;border:1.5px solid var(--blue);padding:8px 18px;border-radius:8px;font-size:14px;font-weight:600;text-decoration:none;transition:all 0.15s}
+.nav-cta-outline:hover{background:var(--blue-light)}
 .hero{background:linear-gradient(160deg,var(--navy) 0%,#1a3a6e 60%,#1565C0 100%);padding:80px 5% 72px;display:flex;align-items:center;gap:48px;min-height:860px;position:relative;overflow:hidden}
 .hero::before{content:'';position:absolute;right:-80px;top:-80px;width:500px;height:500px;border-radius:50%;background:rgba(41,182,246,0.08)}
 .hero::after{content:'';position:absolute;right:10%;bottom:-120px;width:300px;height:300px;border-radius:50%;background:rgba(21,101,192,0.3)}
@@ -33,24 +35,43 @@ h1 span{color:var(--water)}
 .btn-outline{background:rgba(255,255,255,0.1);color:#fff;border:1px solid rgba(255,255,255,0.3);padding:13px 26px;border-radius:9px;font-weight:500;font-size:15px;text-decoration:none;transition:all 0.15s}
 .btn-outline:hover{background:rgba(255,255,255,0.18)}
 .hero-right{flex:0 0 420px;position:relative;z-index:1}
-.hero-card{background:#fff;border-radius:var(--radius-lg);padding:28px;box-shadow:0 20px 60px rgba(0,0,0,0.25);height:auto}
+.hero-card{background:#fff;border-radius:var(--radius-lg);padding:28px;box-shadow:0 20px 60px rgba(0,0,0,0.25)}
 .hero-card h3{font-size:18px;font-weight:600;color:var(--navy);margin-bottom:6px}
 .hero-card p{font-size:13px;color:var(--gray-500);margin-bottom:20px}
-.form-row{display:flex;flex-direction:column;gap:10px}
-.form-field{display:flex;flex-direction:column;gap:4px}
-.form-field label{font-size:12px;font-weight:500;color:var(--gray-700)}
-.form-field input,.form-field select{border:1px solid var(--gray-300);border-radius:8px;padding:10px 13px;font-size:14px;font-family:inherit;color:var(--gray-900);background:var(--gray-50);outline:none;transition:border 0.15s}
-.form-field input:focus,.form-field select:focus{border-color:var(--blue);background:#fff}
-.form-two{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.submit-btn{width:100%;background:var(--blue);color:#fff;border:none;border-radius:8px;padding:13px;font-size:15px;font-weight:600;font-family:inherit;cursor:pointer;margin-top:6px;transition:background 0.15s}
-.submit-btn:hover{background:var(--navy)}
-.form-note{font-size:11px;color:var(--gray-500);text-align:center;margin-top:8px}
 .trust-bar{background:var(--gray-50);border-bottom:1px solid var(--border);padding:16px 5%}
 .trust-inner{display:flex;align-items:center;justify-content:center;gap:40px;flex-wrap:wrap}
 .trust-item{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--gray-700);font-weight:500}
 .trust-icon{width:18px;height:18px;color:var(--blue)}
+.commercial-hero{background:var(--gray-900);padding:72px 5%;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.commercial-label{font-size:12px;font-weight:700;color:var(--water);text-transform:uppercase;letter-spacing:2px;margin-bottom:12px}
+.commercial-title{font-family:'DM Serif Display',serif;font-size:clamp(28px,3vw,42px);color:#fff;line-height:1.2;margin-bottom:16px}
+.commercial-sub{font-size:16px;color:rgba(255,255,255,0.65);line-height:1.7;margin-bottom:32px}
+.commercial-use-cases{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:32px}
+.use-case{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:var(--radius);padding:16px}
+.use-case-icon{width:32px;height:32px;background:rgba(41,182,246,0.15);border-radius:8px;display:flex;align-items:center;justify-content:center;margin-bottom:10px}
+.use-case-icon svg{width:16px;height:16px;stroke:var(--water);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.use-case h4{font-size:13px;font-weight:600;color:#fff;margin-bottom:4px}
+.use-case p{font-size:12px;color:rgba(255,255,255,0.5);line-height:1.5}
+.commercial-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.comm-stat{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:var(--radius);padding:20px 16px;text-align:center}
+.comm-stat-num{font-family:'DM Serif Display',serif;font-size:28px;color:var(--water);margin-bottom:4px}
+.comm-stat-label{font-size:11px;color:rgba(255,255,255,0.45);font-weight:500}
+.comm-quote-card{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.12);border-radius:var(--radius-lg);padding:28px}
+.comm-quote-card h3{font-size:18px;font-weight:600;color:#fff;margin-bottom:6px}
+.comm-quote-card p{font-size:13px;color:rgba(255,255,255,0.5);margin-bottom:24px}
+.form-row{display:flex;flex-direction:column;gap:10px}
+.form-field{display:flex;flex-direction:column;gap:4px}
+.form-field label{font-size:12px;font-weight:500;color:rgba(255,255,255,0.65)}
+.form-field input,.form-field select,.form-field textarea{border:1px solid rgba(255,255,255,0.15);border-radius:8px;padding:10px 13px;font-size:14px;font-family:inherit;color:#fff;background:rgba(255,255,255,0.08);outline:none;transition:border 0.15s}
+.form-field input::placeholder,.form-field textarea::placeholder{color:rgba(255,255,255,0.3)}
+.form-field input:focus,.form-field select:focus,.form-field textarea:focus{border-color:var(--water)}
+.form-field select option{background:var(--gray-900);color:#fff}
+.form-two{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.submit-btn{width:100%;background:var(--water);color:var(--navy);border:none;border-radius:8px;padding:13px;font-size:15px;font-weight:600;font-family:inherit;cursor:pointer;margin-top:6px;transition:background 0.15s}
+.submit-btn:hover{background:#fff}
+.form-note{font-size:11px;color:rgba(255,255,255,0.35);text-align:center;margin-top:8px}
 section{padding:64px 5%}
-.section-label{font-size:36px;font-weight:600;color:var(--blue);text-transform:uppercase;letter-spacing:1.2px;margin-bottom:10px}
+.section-label{font-size:12px;font-weight:700;color:var(--blue);text-transform:uppercase;letter-spacing:2px;margin-bottom:10px}
 .section-title{font-family:'DM Serif Display',serif;font-size:clamp(26px,3vw,38px);color:var(--navy);margin-bottom:14px;letter-spacing:-0.3px}
 .section-sub{font-size:16px;color:var(--gray-500);max-width:540px;line-height:1.65}
 .services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;margin-top:40px}
@@ -61,6 +82,8 @@ section{padding:64px 5%}
 .service-card h3{font-size:16px;font-weight:600;color:var(--navy);margin-bottom:6px}
 .service-card p{font-size:13px;color:var(--gray-500);line-height:1.6}
 .service-tag{display:inline-block;background:var(--blue-light);color:var(--blue);font-size:11px;font-weight:600;padding:3px 9px;border-radius:20px;margin-top:12px}
+.service-tag.orange{background:#FFF3E0;color:#E65100}
+.service-tag.green{background:#E8F5E9;color:#2E7D32}
 .how-section{background:var(--blue-pale)}
 .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:0;margin-top:40px;position:relative}
 .steps::before{content:'';position:absolute;top:28px;left:10%;right:10%;height:1px;background:var(--gray-300);z-index:0}
@@ -72,35 +95,36 @@ section{padding:64px 5%}
 .area-list{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:24px}
 .area-chip{background:var(--blue-light);color:var(--navy);border-radius:8px;padding:10px 14px;font-size:14px;font-weight:500;display:flex;align-items:center;gap:8px}
 .area-chip::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--blue);flex-shrink:0}
-.map-placeholder{background:var(--gray-100);border-radius:var(--radius-lg);border:1px solid var(--border);overflow:hidden}
-.map-svg{width:100%;display:block}
 .pricing-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;margin-top:40px}
 .price-card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius-lg);padding:28px;position:relative}
 .price-card.featured{border:2px solid var(--blue);background:var(--blue-pale)}
+.price-card.commercial-card{border:2px solid var(--navy);background:var(--gray-900)}
 .popular-badge{position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--blue);color:#fff;font-size:11px;font-weight:600;padding:4px 14px;border-radius:20px;white-space:nowrap}
+.commercial-badge{position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--navy);color:var(--water);font-size:11px;font-weight:600;padding:4px 14px;border-radius:20px;white-space:nowrap}
 .price-label{font-size:12px;font-weight:600;color:var(--blue);text-transform:uppercase;letter-spacing:0.8px;margin-bottom:6px}
+.price-card.commercial-card .price-label{color:var(--water)}
 .price-name{font-size:18px;font-weight:600;color:var(--navy);margin-bottom:4px}
+.price-card.commercial-card .price-name{color:#fff}
 .price-desc{font-size:13px;color:var(--gray-500);margin-bottom:20px;line-height:1.5}
+.price-card.commercial-card .price-desc{color:rgba(255,255,255,0.5)}
 .price-amount{font-family:'DM Serif Display',serif;font-size:36px;color:var(--navy);margin-bottom:4px}
+.price-card.commercial-card .price-amount{color:var(--water)}
 .price-amount span{font-size:15px;color:var(--gray-500);font-family:'DM Sans',sans-serif;font-weight:400}
+.price-card.commercial-card .price-amount span{color:rgba(255,255,255,0.4)}
 .price-note{font-size:12px;color:var(--gray-500);margin-bottom:20px}
+.price-card.commercial-card .price-note{color:rgba(255,255,255,0.4)}
 .price-features{list-style:none;display:flex;flex-direction:column;gap:8px}
 .price-features li{font-size:13px;color:var(--gray-700);display:flex;align-items:center;gap:8px}
+.price-card.commercial-card .price-features li{color:rgba(255,255,255,0.7)}
 .price-features li::before{content:'';width:16px;height:16px;border-radius:50%;background:var(--blue-light);flex-shrink:0;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none'%3E%3Cpath d='M3 8l3.5 3.5L13 5' stroke='%231565C0' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")}
+.price-card.commercial-card .price-features li::before{background-color:rgba(41,182,246,0.15);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none'%3E%3Cpath d='M3 8l3.5 3.5L13 5' stroke='%2329B6F6' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")}
 .booking-section{background:var(--navy)}
 .booking-inner{max-width:640px;margin:0 auto;text-align:center}
 .booking-inner .section-title{color:#fff}
 .booking-inner .section-sub{color:rgba(255,255,255,0.65);margin:0 auto 32px}
 .booking-form{background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:var(--radius-lg);padding:28px;text-align:left}
-.booking-form .form-field label{color:rgba(255,255,255,0.75)}
-.booking-form .form-field input,.booking-form .form-field select{background:rgba(255,255,255,0.08);border-color:rgba(255,255,255,0.15);color:#fff}
-.booking-form .form-field input::placeholder{color:rgba(255,255,255,0.35)}
-.booking-form .submit-btn{background:var(--water);color:var(--navy)}
-.booking-form .submit-btn:hover{background:#fff}
-.booking-form .form-note{color:rgba(255,255,255,0.4)}
 footer{background:var(--gray-900);padding:48px 5% 28px}
-.footer-top{display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px;margin-bottom:40px}
-.footer-logo img{height:36px;width:auto;filter:brightness(0) invert(1);margin-bottom:10px;display:block}
+.footer-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:40px}
 .footer-tagline{font-size:13px;color:rgba(255,255,255,0.45);line-height:1.65;max-width:260px}
 .footer-col h4{font-size:13px;font-weight:600;color:rgba(255,255,255,0.65);text-transform:uppercase;letter-spacing:0.8px;margin-bottom:14px}
 .footer-col a{display:block;font-size:13px;color:rgba(255,255,255,0.45);text-decoration:none;margin-bottom:8px;transition:color 0.15s}
@@ -108,60 +132,51 @@ footer{background:var(--gray-900);padding:48px 5% 28px}
 .footer-bottom{border-top:1px solid rgba(255,255,255,0.08);padding-top:20px;display:flex;justify-content:space-between;align-items:center}
 .footer-copy{font-size:12px;color:rgba(255,255,255,0.3)}
 .footer-phone{font-size:13px;color:var(--water);font-weight:500}
-.success-msg{display:none;background:#E8F5E9;border:1px solid #A5D6A7;border-radius:8px;padding:14px 18px;font-size:14px;color:#2E7D32;font-weight:500;margin-top:12px;text-align:center}
-@media(max-width:768px){.hero{flex-direction:column;padding:48px 5%}.hero-right{flex:none;width:100%}.area-section{grid-template-columns:1fr}.footer-top{grid-template-columns:1fr}.steps::before{display:none}.nav-links{display:none}}
+.shape-btn{border:1px solid var(--border);border-radius:var(--radius);padding:12px 6px;text-align:center;cursor:pointer;background:var(--white);transition:all 0.15s}
+@media(max-width:768px){
+  .hero{flex-direction:column;padding:48px 5%}
+  .hero-right{flex:none;width:100%}
+  .area-section{grid-template-columns:1fr}
+  .footer-top{grid-template-columns:1fr 1fr}
+  .steps::before{display:none}
+  .nav-links{display:none}
+  .commercial-hero{grid-template-columns:1fr}
+}
 </style>
 
 <nav>
-  <div class="logo">
-    <img src="logo.png" alt="Indy Bulk Water">
-  </div>
+  <div class="logo"><img src="logo.png" alt="Indy Bulk Water"></div>
   <div class="nav-links">
+    <a href="#commercial">Commercial</a>
     <a href="#services">Services</a>
     <a href="#how">How It Works</a>
     <a href="#area">Service Area</a>
     <a href="#pricing">Pricing</a>
+    <a href="#commercial" class="nav-cta-outline">Get a Quote</a>
     <a href="#book" class="nav-cta">Book Delivery</a>
   </div>
 </nav>
 
 <section class="hero">
   <div class="hero-left">
-    <img src="pool.png" alt="Beautiful backyard swimming pool" style="width:100%;max-width:520px;display:block;margin-bottom:16px;border-radius:var(--radius-lg);box-shadow:0 20px 60px rgba(0,0,0,0.4)">
+    <img src="pool.png" alt="Indy Bulk Water delivery" style="width:100%;max-width:520px;display:block;margin-bottom:16px;border-radius:var(--radius-lg);box-shadow:0 20px 60px rgba(0,0,0,0.4)">
     <div class="hero-badge">Now Serving Hamilton &amp; Boone Counties</div>
-    <div class="hero-logo">
-      <img src="logo.png" alt="Indy Bulk Water Logo">
-    </div>
-    <p class="hero-sub">Fast, clean bulk water delivery for residential pools, hot tubs, and commercial sites across Indianapolis north suburbs. Schedule online in minutes.</p>
+    <div class="hero-logo"><img src="logo.png" alt="Indy Bulk Water Logo"></div>
+    <h1>Bulk Water Delivery.<br><span>Commercial &amp; Residential.</span></h1>
+    <p class="hero-sub">6,200 gallons per load. Municipal-sourced, food-grade tank. Same-day available. One call handles construction sites, pools, ponds, and everything in between across Indianapolis north suburbs.</p>
     <div class="hero-btns">
-      <a href="#book" class="btn-primary">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-        Book a Delivery
+      <a href="#commercial" class="btn-primary">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>
+        Commercial Quote
       </a>
-      <a href="#area" class="btn-outline">Check My Area</a>
+      <a href="#book" class="btn-outline">Book Pool Delivery</a>
     </div>
   </div>
   <div class="hero-right">
     <div class="hero-card">
       <h3>Get on the Spring List</h3>
       <p>We're booking April &amp; May fills now. Reserve your spot.</p>
-      <iframe
-        src="https://api.vission.ai/widget/form/8LXUUCk8Q94xfoVhmA0Y"
-        style="width:100%;height:750px;border:none;border-radius:3px"
-        id="inline-8LXUUCk8Q94xfoVhmA0Y"
-        data-layout="{'id':'INLINE'}"
-        data-trigger-type="alwaysShow"
-        data-trigger-value=""
-        data-activation-type="alwaysActivated"
-        data-activation-value=""
-        data-deactivation-type="neverDeactivate"
-        data-deactivation-value=""
-        data-form-name="Spring List - Hero"
-        data-height="750"
-        data-layout-iframe-id="inline-8LXUUCk8Q94xfoVhmA0Y"
-        data-form-id="8LXUUCk8Q94xfoVhmA0Y"
-        title="Spring List - Hero">
-      </iframe>
+      <iframe src="https://api.vission.ai/widget/form/8LXUUCk8Q94xfoVhmA0Y" style="width:100%;height:750px;border:none;border-radius:3px" id="inline-8LXUUCk8Q94xfoVhmA0Y" data-layout="{'id':'INLINE'}" data-trigger-type="alwaysShow" data-trigger-value="" data-activation-type="alwaysActivated" data-activation-value="" data-deactivation-type="neverDeactivate" data-deactivation-value="" data-form-name="Spring List - Hero" data-height="750" data-layout-iframe-id="inline-8LXUUCk8Q94xfoVhmA0Y" data-form-id="8LXUUCk8Q94xfoVhmA0Y" title="Spring List - Hero"></iframe>
       <script src="https://api.vission.ai/js/form_embed.js"></script>
     </div>
   </div>
@@ -169,139 +184,154 @@ footer{background:var(--gray-900);padding:48px 5% 28px}
 
 <div class="trust-bar">
   <div class="trust-inner">
-    <div class="trust-item"><svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Municipal-sourced water</div>
+    <div class="trust-item"><svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Stainless steel food-grade tank</div>
     <div class="trust-item"><svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Same-day availability</div>
     <div class="trust-item"><svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>Licensed &amp; insured drivers</div>
-    <div class="trust-item"><svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>4,000 gal capacity per load</div>
+    <div class="trust-item"><svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>Commercial invoicing available</div>
+    <div class="trust-item"><svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>6,200 gal per load</div>
   </div>
 </div>
 
-<section id="services">
-  <div class="section-label">What We Deliver</div>
-  <div class="section-title">Every Water Job, Handled</div>
-  <p class="section-sub">From spring pool fills to construction site water, one call gets the job done.</p>
-  <div class="services-grid">
-    <div class="service-card">
-      <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M12 3C8 3 5 6.5 5 10c0 4 4 8 7 10 3-2 7-6 7-10 0-3.5-3-7-7-7z"/><circle cx="12" cy="10" r="2.5"/></svg></div>
-      <h3>Residential Pool Fills</h3>
-      <p>New installs, spring openings, or full drains. We deliver clean, treated water direct to your pool &mdash; ready to swim the same day.</p>
-      <span class="service-tag">Most popular</span>
+<section class="commercial-hero" id="commercial">
+  <div>
+    <div class="commercial-label">Commercial &amp; Construction</div>
+    <h2 class="commercial-title">Site Water When You Need It.<br>No Waiting. No Guessing.</h2>
+    <p class="commercial-sub">Construction sites, municipalities, industrial operations, and contractors across Hamilton and Boone Counties rely on Indy Bulk Water for fast, reliable bulk water delivery. Our stainless steel, food-grade tank and municipal water sourcing set us apart from general bulk water operators — we're actively pursuing IDEM potable water hauler certification. Multi-load contracts, invoiced billing, and priority scheduling available.</p>
+    <div class="commercial-use-cases">
+      <div class="use-case">
+        <div class="use-case-icon"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg></div>
+        <h4>Dust Control</h4>
+        <p>Road grading, demolition sites, material staging areas</p>
+      </div>
+      <div class="use-case">
+        <div class="use-case-icon"><svg viewBox="0 0 24 24"><path d="M2 20h20M6 20V10l6-6 6 6v10"/><path d="M10 20v-5h4v5"/></svg></div>
+        <h4>Concrete &amp; Compaction</h4>
+        <p>Mixing water, subgrade compaction, foundation work</p>
+      </div>
+      <div class="use-case">
+        <div class="use-case-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8 12h8M12 8v8"/></svg></div>
+        <h4>Hydrostatic Testing</h4>
+        <p>Pipe, tank, and pressure vessel testing</p>
+      </div>
+      <div class="use-case">
+        <div class="use-case-icon"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/><path d="M8 12s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg></div>
+        <h4>Ponds &amp; Retention</h4>
+        <p>New installations, drought top-offs, water features</p>
+      </div>
     </div>
-    <div class="service-card">
-      <div class="service-icon"><svg viewBox="0 0 24 24"><rect x="3" y="8" width="18" height="12" rx="2"/><path d="M7 8V6a5 5 0 0 1 10 0v2"/></svg></div>
-      <h3>Hot Tub &amp; Spa Fills</h3>
-      <p>Quick fills for spas and hot tubs. We calibrate flow to avoid overflow and leave you ready to balance and enjoy.</p>
-      <span class="service-tag">Fast turnaround</span>
+    <div class="commercial-stats">
+      <div class="comm-stat"><div class="comm-stat-num">6,200</div><div class="comm-stat-label">Gallons per load</div></div>
+      <div class="comm-stat"><div class="comm-stat-num">Year-round</div><div class="comm-stat-label">Availability</div></div>
+      <div class="comm-stat"><div class="comm-stat-num">Net 30</div><div class="comm-stat-label">Invoicing available</div></div>
     </div>
-    <div class="service-card">
-      <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M3 12h18M3 6h18M3 18h12"/><circle cx="19" cy="18" r="3"/></svg></div>
-      <h3>Pond &amp; Water Features</h3>
-      <p>Decorative ponds, retention features, and landscape water elements. Seasonal refills and drought top-offs.</p>
-      <span class="service-tag">Boone Co. specialty</span>
-    </div>
-    <div class="service-card">
-      <div class="service-icon"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg></div>
-      <h3>Commercial &amp; Construction</h3>
-      <p>Site water for dust control, concrete mixing, compaction, and hydrostatic testing. Year-round availability.</p>
-      <span class="service-tag">Off-season revenue</span>
+  </div>
+  <div class="comm-quote-card">
+    <h3>Request a Commercial Quote</h3>
+    <p>Tell us about your project and we'll respond within 2 hours during business hours.</p>
+    <div class="form-row">
+      <div class="form-two">
+        <div class="form-field"><label>Company / Contractor</label><input type="text" placeholder="ABC Construction"></div>
+        <div class="form-field"><label>Contact Name</label><input type="text" placeholder="Your name"></div>
+      </div>
+      <div class="form-field"><label>Phone</label><input type="tel" placeholder="(317) 000-0000"></div>
+      <div class="form-field">
+        <label>Use Type</label>
+        <select>
+          <option value="">Select use type...</option>
+          <option>Dust control</option>
+          <option>Concrete / compaction</option>
+          <option>Hydrostatic testing</option>
+          <option>Pond / retention fill</option>
+          <option>Other commercial</option>
+        </select>
+      </div>
+      <div class="form-field">
+        <label>Estimated volume needed</label>
+        <select>
+          <option value="">Select volume...</option>
+          <option>1-2 loads (up to 8,000 gal)</option>
+          <option>3-5 loads (up to 20,000 gal)</option>
+          <option>6-10 loads (up to 40,000 gal)</option>
+          <option>10+ loads / ongoing contract</option>
+        </select>
+      </div>
+      <div class="form-field"><label>Site address / location</label><input type="text" placeholder="Jobsite address or cross-streets"></div>
+      <div class="form-field"><label>Notes (optional)</label><textarea rows="2" placeholder="Timeline, access requirements, anything else..." style="resize:vertical"></textarea></div>
+      <button class="submit-btn">Request Quote &rarr;</button>
+      <p class="form-note">We respond within 2 business hours. Volume discounts available.</p>
     </div>
   </div>
 </section>
 
+<section id="services">
+  <div class="section-label">What We Deliver</div>
+  <div class="section-title">Every Water Job, Handled</div>
+  <p class="section-sub">From construction site dust control to spring pool fills — one truck, one call.</p>
+  <div class="services-grid">
+    <div class="service-card">
+      <div class="service-icon"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg></div>
+      <h3>Construction &amp; Site Water</h3>
+      <p>Dust control, concrete mixing, subgrade compaction, and hydrostatic testing. Multi-load contracts and invoiced billing for GCs and subs.</p>
+      <span class="service-tag orange">Year-round</span>
+    </div>
+    <div class="service-card">
+      <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M12 3C8 3 5 6.5 5 10c0 4 4 8 7 10 3-2 7-6 7-10 0-3.5-3-7-7-7z"/><circle cx="12" cy="10" r="2.5"/></svg></div>
+      <h3>Residential Pool Fills</h3>
+      <p>New installs, spring openings, or full drains. Clean municipal water delivered direct — ready to swim the same day.</p>
+      <span class="service-tag">Most popular</span>
+    </div>
+    <div class="service-card">
+      <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M3 12h18M3 6h18M3 18h12"/><circle cx="19" cy="18" r="3"/></svg></div>
+      <h3>Pond &amp; Water Features</h3>
+      <p>Decorative ponds, retention basins, and landscape water features. New fills, seasonal top-offs, and drought recovery.</p>
+      <span class="service-tag green">Boone Co. specialty</span>
+    </div>
+    <div class="service-card">
+      <div class="service-icon"><svg viewBox="0 0 24 24"><rect x="3" y="8" width="18" height="12" rx="2"/><path d="M7 8V6a5 5 0 0 1 10 0v2"/></svg></div>
+      <h3>Hot Tub &amp; Spa Fills</h3>
+      <p>Fast fills for spas and hot tubs. Calibrated flow to avoid overflow, in and out in under an hour.</p>
+      <span class="service-tag">Fast turnaround</span>
+    </div>
+  </div>
+</section>
 
-<section id="truck" style="background:var(--navy);overflow:hidden;padding:0">
+<section style="background:var(--navy);overflow:hidden;padding:0" id="truck">
   <div style="display:grid;grid-template-columns:1fr 1fr;min-height:500px">
     <div style="background:#000;display:flex;align-items:center;justify-content:center;overflow:hidden">
       <img src="Truck.png" alt="Indy Bulk Water delivery truck" style="width:100%;height:100%;object-fit:cover;mix-blend-mode:lighten;display:block">
     </div>
     <div style="padding:56px 48px;display:flex;flex-direction:column;justify-content:center">
       <div class="section-label" style="color:var(--water)">Our Truck</div>
-      <div class="section-title" style="color:#fff">4,000 Gallons. One Trip.</div>
-      <p style="font-size:16px;color:rgba(255,255,255,0.7);line-height:1.7;margin-bottom:24px">Our dedicated water hauler carries up to 4,000 gallons of clean, municipal-sourced water per load &mdash; the same water that comes out of your tap, treated to drinking water standards. We never haul anything else in this tank. Ever.</p>
+      <div class="section-title" style="color:#fff">6,200 Gallons. One Trip.</div>
+      <p style="font-size:16px;color:rgba(255,255,255,0.7);line-height:1.7;margin-bottom:24px">Our stainless steel, food-grade tank carries up to 6,200 gallons of municipal-sourced water per load &#8212; the same water that comes out of your tap, treated to drinking water standards. We are actively pursuing IDEM potable water hauler certification, placing us in a higher standard category than general bulk water operators. We never haul anything else in this tank. Ever.</p>
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
-        <div style="background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:var(--radius);padding:16px">
-          <div style="font-size:22px;font-weight:600;color:var(--water);margin-bottom:4px">4,000</div>
-          <div style="font-size:12px;color:rgba(255,255,255,0.55)">Gallons per load</div>
-        </div>
-        <div style="background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:var(--radius);padding:16px">
-          <div style="font-size:22px;font-weight:600;color:var(--water);margin-bottom:4px">Same day</div>
-          <div style="font-size:12px;color:rgba(255,255,255,0.55)">Ready to swim</div>
-        </div>
-        <div style="background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:var(--radius);padding:16px">
-          <div style="font-size:22px;font-weight:600;color:var(--water);margin-bottom:4px">300 ft</div>
-          <div style="font-size:12px;color:rgba(255,255,255,0.55)">Max hose reach</div>
-        </div>
-        <div style="background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:var(--radius);padding:16px">
-          <div style="font-size:22px;font-weight:600;color:var(--water);margin-bottom:4px">Water only</div>
-          <div style="font-size:12px;color:rgba(255,255,255,0.55)">Dedicated tank</div>
+        <div style="background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:var(--radius);padding:16px"><div style="font-size:22px;font-weight:600;color:var(--water);margin-bottom:4px">6,200</div><div style="font-size:12px;color:rgba(255,255,255,0.55)">Gallons per load</div></div>
+        <div style="background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:var(--radius);padding:16px"><div style="font-size:22px;font-weight:600;color:var(--water);margin-bottom:4px">Same day</div><div style="font-size:12px;color:rgba(255,255,255,0.55)">Ready to swim or work</div></div>
+        <div style="background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:var(--radius);padding:16px"><div style="font-size:22px;font-weight:600;color:var(--water);margin-bottom:4px">300 ft</div><div style="font-size:12px;color:rgba(255,255,255,0.55)">Max hose reach</div></div>
+        <div style="background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:var(--radius);padding:16px"><div style="font-size:22px;font-weight:600;color:var(--water);margin-bottom:4px">Water only</div><div style="font-size:12px;color:rgba(255,255,255,0.55)">Dedicated tank</div></div>
+      </div>
+      <div style="margin-top:20px;background:rgba(41,182,246,0.08);border:1px solid rgba(41,182,246,0.25);border-radius:var(--radius);padding:16px 20px;display:flex;gap:14px;align-items:flex-start">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#29B6F6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <div>
+          <div style="font-size:13px;font-weight:600;color:var(--water);margin-bottom:4px">Stainless Steel Food-Grade Tank &mdash; IDEM Certification In Progress</div>
+          <div style="font-size:12px;color:rgba(255,255,255,0.55);line-height:1.6">Our stainless steel tank is built to food-grade standards and dedicated exclusively to water. We are actively pursuing Indiana IDEM potable water hauler certification &mdash; a standard most bulk water operators never seek. When you see that certification listed here, you'll know the water we deliver meets a verified, regulated standard of cleanliness.</div>
         </div>
       </div>
     </div>
   </div>
 </section>
-
-<section id="faq" style="background:var(--white)">
-  <div style="max-width:760px;margin:0 auto">
-    <div class="section-label">FAQ</div>
-    <div class="section-title">Questions People Actually Ask</div>
-    <p class="section-sub" style="margin-bottom:40px">Everything you need to know before you book.</p>
-
-    <div style="background:#FFF3CD;border:1px solid #F0AD00;border-radius:var(--radius-lg);padding:20px 24px;margin-bottom:36px;display:flex;gap:16px;align-items:flex-start">
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#856404" stroke-width="2" stroke-linecap="round" style="flex-shrink:0;margin-top:2px"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-      <div>
-        <div style="font-size:14px;font-weight:600;color:#856404;margin-bottom:4px">Vinyl liner pool owners &mdash; read this first</div>
-        <div style="font-size:13px;color:#856404;line-height:1.6">Never empty a vinyl liner pool without having a delivery truck scheduled for the same day. Vinyl liners shrink when exposed to air and will not stretch back to full size. Once you have cleaned the pool, put at least 4 inches of water back in immediately to keep the liner pressed against the wall.</div>
-      </div>
-    </div>
-
-    <div id="faq-list">
-    </div>
-  </div>
-</section>
-
-<script>
-var faqs=[
-  {q:"Why not just use my garden hose?",a:"A standard garden hose flows about 6 gallons per minute &mdash; that's 360 gallons per hour. A typical 15,000-gallon pool would take over 40 hours to fill. With our truck you get 4,000 gallons delivered in one shot. Most pools are swim-ready the same day we deliver."},
-  {q:"Where does the water come from?",a:"We source our water exclusively from local municipalities &mdash; the same treated water that comes out of your tap. It meets all Indiana state standards for drinking water quality."},
-  {q:"Is the water safe to swim in right away?",a:"Yes. Because it's already treated municipal water, you can often swim the same day. You'll still want to balance your pH and chlorine levels, but you won't need to wait days like you would with untreated well water."},
-  {q:"Does your truck haul anything besides water?",a:"Never. Our tank is dedicated to fresh water only. We do not haul fuel, fertilizer, chemicals, or anything else. What goes in your pool is exactly what we fill the tank with &mdash; clean municipal water."},
-  {q:"Do I need to be home during the delivery?",a:"No. We fill pools all the time while customers are at work. We just need clear access to your pool and payment arrangements made in advance. We'll text you when we're on the way and when we're done."},
-  {q:"Will the water pressure damage my pool or liner?",a:"No. We idle the pump during the first several inches of fill, then gradually increase flow. This protects vinyl liners from wrinkles and gives you time to smooth them out before the water gets too deep."},
-  {q:"How do you get the water to the pool?",a:"We run hose from the truck to your pool &mdash; up to 300 feet of reach. We're careful around landscaping, flowerbeds, and fencing. Most residential setups are straightforward."},
-  {q:"How many loads will my pool need?",a:"Use the pool calculator above to get an estimate. Most residential inground pools need 2 to 5 loads depending on size. Our calculator breaks it down by shape and depth."},
-  {q:"When should I book?",a:"In peak season (April through August) we recommend booking at least a week out. For spring openings, earlier is better &mdash; April slots fill fast. Same-day availability exists but carries a +$75 surcharge."},
-  {q:"How do I pay?",a:"We accept cash, check, and all major credit cards. Payment is due upon completion of the final load. No payment is required to book online."}
-];
-
-var list=document.getElementById('faq-list');
-faqs.forEach(function(f,i){
-  var item=document.createElement('div');
-  item.style.cssText='border-bottom:1px solid var(--border);overflow:hidden';
-  item.innerHTML='<button onclick="toggleFaq('+i+',this)" style="width:100%;text-align:left;background:none;border:none;padding:20px 0;display:flex;justify-content:space-between;align-items:center;cursor:pointer;font-family:inherit;font-size:16px;font-weight:500;color:var(--navy)">'+f.q+'<svg id="faq-icon-'+i+'" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" style="flex-shrink:0;transition:transform 0.2s;color:var(--blue)"><polyline points="6 9 12 15 18 9"/></svg></button><div id="faq-ans-'+i+'" style="display:none;padding:0 0 20px;font-size:15px;color:var(--gray-500);line-height:1.7">'+f.a+'</div>';
-  list.appendChild(item);
-});
-
-function toggleFaq(i,btn){
-  var ans=document.getElementById('faq-ans-'+i);
-  var icon=document.getElementById('faq-icon-'+i);
-  var open=ans.style.display==='block';
-  document.querySelectorAll('[id^="faq-ans-"]').forEach(function(a){a.style.display='none'});
-  document.querySelectorAll('[id^="faq-icon-"]').forEach(function(ic){ic.style.transform='rotate(0deg)'});
-  if(!open){ans.style.display='block';icon.style.transform='rotate(180deg)';}
-}
-</script>
 
 <section class="how-section" id="how">
   <div style="text-align:center">
     <div class="section-label">The Process</div>
-    <div class="section-title">Ready to Swim in 3 Steps</div>
-    <p class="section-sub" style="margin:0 auto">We've made booking as simple as possible &mdash; no phone tag, no guesswork.</p>
+    <div class="section-title">Simple from First Call to Final Load</div>
+    <p class="section-sub" style="margin:0 auto">Same streamlined process for residential and commercial — no phone tag, no guesswork.</p>
   </div>
   <div class="steps">
-    <div class="step"><div class="step-num">1</div><h3>Book Online</h3><p>Enter your pool size and preferred date. Pick a 2-hour delivery window that works for you.</p></div>
-    <div class="step"><div class="step-num">2</div><h3>We Confirm</h3><p>You get an instant text confirmation and a reminder the morning of your delivery.</p></div>
-    <div class="step"><div class="step-num">3</div><h3>We Deliver</h3><p>Our driver arrives in the window, fills your pool with clean municipal water, and you're done.</p></div>
-    <div class="step"><div class="step-num">4</div><h3>Swim</h3><p>Add your chemicals, run the filter for a few hours, and you're ready. No waiting days for a hose.</p></div>
+    <div class="step"><div class="step-num">1</div><h3>Book or Request a Quote</h3><p>Residential: book online and pick a 2-hour window. Commercial: submit your project details and we respond within 2 hours.</p></div>
+    <div class="step"><div class="step-num">2</div><h3>We Confirm</h3><p>You get an instant confirmation and a reminder the morning of your delivery. Commercial jobs get a written quote and schedule.</p></div>
+    <div class="step"><div class="step-num">3</div><h3>We Deliver</h3><p>Our driver arrives in your window, delivers clean municipal water exactly where you need it, and documents the load.</p></div>
+    <div class="step"><div class="step-num">4</div><h3>Done</h3><p>Residential: balance chemicals and swim. Commercial: invoice sent same day. Volume contracts get priority scheduling.</p></div>
   </div>
 </section>
 
@@ -309,8 +339,8 @@ function toggleFaq(i,btn){
   <div class="area-section">
     <div>
       <div class="section-label">Service Area</div>
-      <div class="section-title">We Come to You</div>
-      <p class="section-sub">Proudly serving Hamilton and Boone Counties and the Indianapolis north suburbs.</p>
+      <div class="section-title">We Come to Your Site</div>
+      <p class="section-sub">Serving Hamilton and Boone Counties and the Indianapolis north suburbs — residential and commercial.</p>
       <div class="area-list">
         <div class="area-chip">Carmel</div><div class="area-chip">Fishers</div>
         <div class="area-chip">Noblesville</div><div class="area-chip">Westfield</div>
@@ -318,9 +348,10 @@ function toggleFaq(i,btn){
         <div class="area-chip">Geist</div><div class="area-chip">Cicero</div>
         <div class="area-chip">Sheridan</div><div class="area-chip">Lebanon</div>
       </div>
+      <p style="font-size:13px;color:var(--gray-500);margin-top:16px">Outside our primary area? Call — we accommodate commercial projects on a case-by-case basis.</p>
     </div>
-    <div class="map-placeholder">
-      <img src="delivery.png" alt="Indy Bulk Water truck filling a pool" style="width:100%;height:340px;object-fit:cover;display:block;border-radius:var(--radius-lg)">
+    <div style="background:var(--gray-100);border-radius:var(--radius-lg);border:1px solid var(--border);overflow:hidden">
+      <img src="delivery.png" alt="Indy Bulk Water truck on site" style="width:100%;height:340px;object-fit:cover;display:block;border-radius:var(--radius-lg)">
     </div>
   </div>
 </section>
@@ -334,7 +365,7 @@ function toggleFaq(i,btn){
   <div class="pricing-grid">
     <div class="price-card">
       <div class="price-label">Standard</div><div class="price-name">Partial Fill</div>
-      <div class="price-desc">Top-offs, spa fills, or above-ground pools under 4,000 gal</div>
+      <div class="price-desc">Top-offs, spa fills, or above-ground pools under 2,500 gal</div>
       <div class="price-amount">$220 <span>/ load</span></div><div class="price-note">Up to 2,500 gallons</div>
       <ul class="price-features"><li>Municipal treated water</li><li>Same-day available</li><li>No minimum order</li><li>SMS confirmation</li></ul>
     </div>
@@ -342,99 +373,162 @@ function toggleFaq(i,btn){
       <div class="popular-badge">Most popular</div>
       <div class="price-label">Full Fill</div><div class="price-name">Pool Fill</div>
       <div class="price-desc">Full inground pool fills, vinyl liner installs, spring openings</div>
-      <div class="price-amount">$350 <span>/ load</span></div><div class="price-note">Up to 4,000 gallons per load</div>
+      <div class="price-amount">$350 <span>/ load</span></div><div class="price-note">Up to 6,200 gallons per load</div>
       <ul class="price-features"><li>Municipal treated water</li><li>Multi-load scheduling</li><li>Real-time driver tracking</li><li>Same-day available</li><li>SMS &amp; email confirmation</li></ul>
     </div>
-    <div class="price-card">
-      <div class="price-label">Commercial</div><div class="price-name">Site Water</div>
-      <div class="price-desc">Construction dust control, concrete, compaction, hydrostatic testing</div>
-      <div class="price-amount">$400 <span>/ load</span></div><div class="price-note">Volume discounts available</div>
-      <ul class="price-features"><li>Year-round availability</li><li>Multi-load contracts</li><li>Invoiced billing available</li><li>Priority scheduling</li></ul>
+    <div class="price-card commercial-card">
+      <div class="commercial-badge">Commercial</div>
+      <div class="price-label">Site Water</div><div class="price-name">Commercial Delivery</div>
+      <div class="price-desc">Construction, dust control, compaction, hydrostatic testing</div>
+      <div class="price-amount">$400 <span>/ load</span></div><div class="price-note">Volume discounts on contract</div>
+      <ul class="price-features"><li>Year-round availability</li><li>Multi-load contracts</li><li>Net 30 invoiced billing</li><li>Priority scheduling</li><li>Written quote provided</li></ul>
     </div>
   </div>
-  <p style="text-align:center;font-size:13px;color:var(--gray-500);margin-top:20px">Emergency same-day surcharge: +$75. Most residential pools require 2&ndash;5 loads (4,000 gal per load).</p>
+  <p style="text-align:center;font-size:13px;color:var(--gray-500);margin-top:20px">Emergency same-day surcharge: +$75. Most residential pools require 2-5 loads. Commercial volume discounts on 6+ load contracts.</p>
 </section>
 
-<section id="estimator" style="background:var(--gray-50);border-top:1px solid var(--border)">
+<section id="estimator" style="background:var(--white);border-top:1px solid var(--border)">
   <div style="max-width:680px;margin:0 auto">
     <div class="section-label">Pool Calculator</div>
     <div class="section-title">How Much Water Do You Need?</div>
-    <p class="section-sub" style="margin-bottom:32px">Enter your pool dimensions and we'll estimate your gallons, number of loads, and total cost &mdash; before you ever pick up the phone.</p>
-
-    <div style="background:var(--white);border:1px solid var(--border);border-radius:var(--radius-lg);padding:28px">
-
-      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:20px" id="shape-selector">
-        <div class="shape-btn active" onclick="setShape('rectangle',this)" style="border:1px solid var(--border);border-radius:var(--radius);padding:12px 6px;text-align:center;cursor:pointer;background:var(--white);transition:all 0.15s">
+    <p class="section-sub" style="margin-bottom:32px">Enter your pool dimensions and we'll estimate your gallons, number of loads, and total cost before you ever pick up the phone.</p>
+    <div style="background:var(--gray-50);border:1px solid var(--border);border-radius:var(--radius-lg);padding:28px">
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:20px">
+        <div class="shape-btn active" onclick="setShape('rectangle',this)">
           <svg width="48" height="32" viewBox="0 0 48 32" style="display:block;margin:0 auto 6px"><rect x="2" y="4" width="44" height="24" rx="2" fill="#B5D4F4" stroke="#1565C0" stroke-width="2"/></svg>
           <div style="font-size:11px;color:var(--gray-500)">Rectangle</div>
         </div>
-        <div class="shape-btn" onclick="setShape('oval',this)" style="border:1px solid var(--border);border-radius:var(--radius);padding:12px 6px;text-align:center;cursor:pointer;background:var(--white);transition:all 0.15s">
+        <div class="shape-btn" onclick="setShape('oval',this)">
           <svg width="48" height="32" viewBox="0 0 48 32" style="display:block;margin:0 auto 6px"><ellipse cx="24" cy="16" rx="22" ry="13" fill="#B5D4F4" stroke="#1565C0" stroke-width="2"/></svg>
           <div style="font-size:11px;color:var(--gray-500)">Oval</div>
         </div>
-        <div class="shape-btn" onclick="setShape('kidney',this)" style="border:1px solid var(--border);border-radius:var(--radius);padding:12px 6px;text-align:center;cursor:pointer;background:var(--white);transition:all 0.15s">
+        <div class="shape-btn" onclick="setShape('kidney',this)">
           <svg width="48" height="32" viewBox="0 0 48 32" style="display:block;margin:0 auto 6px"><path d="M4,16 C4,8 10,3 18,4 C22,4 24,8 24,12 C24,16 26,18 30,18 C38,18 44,22 44,28 C44,30 40,30 36,29 C28,27 20,28 12,26 C6,24 4,22 4,16 Z" fill="#B5D4F4" stroke="#1565C0" stroke-width="2"/></svg>
           <div style="font-size:11px;color:var(--gray-500)">Kidney</div>
         </div>
-        <div class="shape-btn" onclick="setShape('lshape',this)" style="border:1px solid var(--border);border-radius:var(--radius);padding:12px 6px;text-align:center;cursor:pointer;background:var(--white);transition:all 0.15s">
-          <svg width="48" height="32" viewBox="0 0 48 32" style="display:block;margin:0 auto 6px"><path d="M2,2 L28,2 L28,14 L46,14 L46,30 L2,30 Z" fill="#B5D4F4" stroke="#1565C0" stroke-width="2" rx="1"/></svg>
+        <div class="shape-btn" onclick="setShape('lshape',this)">
+          <svg width="48" height="32" viewBox="0 0 48 32" style="display:block;margin:0 auto 6px"><path d="M2,2 L28,2 L28,14 L46,14 L46,30 L2,30 Z" fill="#B5D4F4" stroke="#1565C0" stroke-width="2"/></svg>
           <div style="font-size:11px;color:var(--gray-500)">L-Shape</div>
         </div>
       </div>
-
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px">
-        <div>
-          <label style="font-size:12px;font-weight:500;color:var(--gray-700);display:block;margin-bottom:4px">Length (ft)</label>
-          <input type="number" id="est-length" value="30" min="5" max="100" oninput="estCalc()" style="width:100%;border:1px solid var(--gray-300);border-radius:8px;padding:10px 13px;font-size:14px;font-family:inherit;color:var(--gray-900);background:var(--gray-50);outline:none;box-sizing:border-box">
-        </div>
-        <div>
-          <label style="font-size:12px;font-weight:500;color:var(--gray-700);display:block;margin-bottom:4px">Width (ft)</label>
-          <input type="number" id="est-width" value="15" min="5" max="60" oninput="estCalc()" style="width:100%;border:1px solid var(--gray-300);border-radius:8px;padding:10px 13px;font-size:14px;font-family:inherit;color:var(--gray-900);background:var(--gray-50);outline:none;box-sizing:border-box">
-        </div>
-        <div>
-          <label style="font-size:12px;font-weight:500;color:var(--gray-700);display:block;margin-bottom:4px">Shallow end depth (ft)</label>
-          <input type="number" id="est-shallow" value="3.5" min="1" max="6" step="0.5" oninput="estCalc()" style="width:100%;border:1px solid var(--gray-300);border-radius:8px;padding:10px 13px;font-size:14px;font-family:inherit;color:var(--gray-900);background:var(--gray-50);outline:none;box-sizing:border-box">
-        </div>
-        <div>
-          <label style="font-size:12px;font-weight:500;color:var(--gray-700);display:block;margin-bottom:4px">Deep end depth (ft)</label>
-          <input type="number" id="est-deep" value="8" min="4" max="14" step="0.5" oninput="estCalc()" style="width:100%;border:1px solid var(--gray-300);border-radius:8px;padding:10px 13px;font-size:14px;font-family:inherit;color:var(--gray-900);background:var(--gray-50);outline:none;box-sizing:border-box">
-        </div>
+        <div><label style="font-size:12px;font-weight:500;color:var(--gray-700);display:block;margin-bottom:4px">Length (ft)</label><input type="number" id="est-length" value="30" min="5" max="100" oninput="estCalc()" style="width:100%;border:1px solid var(--gray-300);border-radius:8px;padding:10px 13px;font-size:14px;font-family:inherit;color:var(--gray-900);background:var(--white);outline:none;box-sizing:border-box"></div>
+        <div><label style="font-size:12px;font-weight:500;color:var(--gray-700);display:block;margin-bottom:4px">Width (ft)</label><input type="number" id="est-width" value="15" min="5" max="60" oninput="estCalc()" style="width:100%;border:1px solid var(--gray-300);border-radius:8px;padding:10px 13px;font-size:14px;font-family:inherit;color:var(--gray-900);background:var(--white);outline:none;box-sizing:border-box"></div>
+        <div><label style="font-size:12px;font-weight:500;color:var(--gray-700);display:block;margin-bottom:4px">Shallow end (ft)</label><input type="number" id="est-shallow" value="3.5" min="1" max="6" step="0.5" oninput="estCalc()" style="width:100%;border:1px solid var(--gray-300);border-radius:8px;padding:10px 13px;font-size:14px;font-family:inherit;color:var(--gray-900);background:var(--white);outline:none;box-sizing:border-box"></div>
+        <div><label style="font-size:12px;font-weight:500;color:var(--gray-700);display:block;margin-bottom:4px">Deep end (ft)</label><input type="number" id="est-deep" value="8" min="4" max="14" step="0.5" oninput="estCalc()" style="width:100%;border:1px solid var(--gray-300);border-radius:8px;padding:10px 13px;font-size:14px;font-family:inherit;color:var(--gray-900);background:var(--white);outline:none;box-sizing:border-box"></div>
       </div>
-
       <div style="margin-bottom:20px">
-        <label style="font-size:12px;font-weight:500;color:var(--gray-700);display:block;margin-bottom:4px">Fill level: <span id="est-fill-label">100% &mdash; full pool</span></label>
+        <label style="font-size:12px;font-weight:500;color:var(--gray-700);display:block;margin-bottom:4px">Fill level: <span id="est-fill-label">100% - full pool</span></label>
         <input type="range" id="est-fillpct" min="10" max="100" value="100" step="10" oninput="estUpdateFill();estCalc()" style="width:100%">
       </div>
-
       <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:20px">
-        <div style="background:var(--blue-pale);border-radius:var(--radius);padding:14px 16px">
-          <div style="font-size:11px;font-weight:600;color:var(--blue);text-transform:uppercase;letter-spacing:0.8px;margin-bottom:4px">Gallons needed</div>
-          <div style="font-size:22px;font-weight:600;color:var(--navy)" id="est-gallons">13,500</div>
-        </div>
-        <div style="background:var(--blue-pale);border-radius:var(--radius);padding:14px 16px">
-          <div style="font-size:11px;font-weight:600;color:var(--blue);text-transform:uppercase;letter-spacing:0.8px;margin-bottom:4px">Loads needed</div>
-          <div style="font-size:22px;font-weight:600;color:var(--navy)" id="est-loads">4</div>
-        </div>
-        <div style="background:var(--blue-pale);border-radius:var(--radius);padding:14px 16px">
-          <div style="font-size:11px;font-weight:600;color:var(--blue);text-transform:uppercase;letter-spacing:0.8px;margin-bottom:4px">Est. cost</div>
-          <div style="font-size:22px;font-weight:600;color:var(--navy)" id="est-cost">$1,400</div>
-        </div>
+        <div style="background:var(--blue-pale);border-radius:var(--radius);padding:14px 16px"><div style="font-size:11px;font-weight:600;color:var(--blue);text-transform:uppercase;letter-spacing:0.8px;margin-bottom:4px">Gallons needed</div><div style="font-size:22px;font-weight:600;color:var(--navy)" id="est-gallons">13,500</div></div>
+        <div style="background:var(--blue-pale);border-radius:var(--radius);padding:14px 16px"><div style="font-size:11px;font-weight:600;color:var(--blue);text-transform:uppercase;letter-spacing:0.8px;margin-bottom:4px">Loads needed</div><div style="font-size:22px;font-weight:600;color:var(--navy)" id="est-loads">4</div></div>
+        <div style="background:var(--blue-pale);border-radius:var(--radius);padding:14px 16px"><div style="font-size:11px;font-weight:600;color:var(--blue);text-transform:uppercase;letter-spacing:0.8px;margin-bottom:4px">Est. cost</div><div style="font-size:22px;font-weight:600;color:var(--navy)" id="est-cost">$1,400</div></div>
       </div>
-
       <div style="margin-bottom:16px">
         <div style="font-size:12px;font-weight:500;color:var(--gray-700);margin-bottom:8px">Load breakdown</div>
         <div id="est-bar" style="display:flex;gap:6px;flex-wrap:wrap"></div>
       </div>
-
       <p id="est-note" style="font-size:12px;color:var(--gray-500);margin-bottom:16px;text-align:center"></p>
-
-      <a href="#book" class="btn-primary" style="display:flex;justify-content:center;text-decoration:none">
-        Book Your Delivery &rarr;
-      </a>
-      <p style="font-size:11px;color:var(--gray-500);text-align:center;margin-top:8px">Estimates assume a standard tapered pool floor. Actual volume may vary &plusmn;10%.</p>
+      <a href="#book" class="btn-primary" style="display:flex;justify-content:center;text-decoration:none;background:var(--blue);color:#fff">Book Your Delivery &rarr;</a>
+      <p style="font-size:11px;color:var(--gray-500);text-align:center;margin-top:8px">Estimates assume a standard tapered pool floor. Actual volume may vary +/-10%.</p>
     </div>
   </div>
 </section>
+
+<section id="faq" style="background:var(--gray-50)">
+  <div style="max-width:760px;margin:0 auto">
+    <div class="section-label">FAQ</div>
+    <div class="section-title">Questions People Actually Ask</div>
+    <p class="section-sub" style="margin-bottom:40px">Everything you need to know before you book — residential or commercial.</p>
+    <div style="background:#FFF3CD;border:1px solid #F0AD00;border-radius:var(--radius-lg);padding:20px 24px;margin-bottom:36px;display:flex;gap:16px;align-items:flex-start">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#856404" stroke-width="2" stroke-linecap="round" style="flex-shrink:0;margin-top:2px"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+      <div>
+        <div style="font-size:14px;font-weight:600;color:#856404;margin-bottom:4px">Vinyl liner pool owners - read this first</div>
+        <div style="font-size:13px;color:#856404;line-height:1.6">Never empty a vinyl liner pool without having a delivery truck scheduled for the same day. Vinyl liners shrink when exposed to air and will not stretch back to full size. Once you have cleaned the pool, put at least 4 inches of water back in immediately to keep the liner pressed against the wall.</div>
+      </div>
+    </div>
+    <div id="faq-list"></div>
+  </div>
+</section>
+
+<script>
+var faqs=[
+  {q:"Do you handle commercial and construction projects?",a:"Yes - commercial is a core part of what we do. We supply site water for dust control, concrete mixing, subgrade compaction, hydrostatic testing, and large-scale pond fills. We offer multi-load contracts, Net 30 invoiced billing, and priority scheduling for GCs, subs, and municipalities. Request a quote through the commercial form above and we'll respond within 2 business hours."},
+  {q:"Can you invoice our company rather than requiring payment on delivery?",a:"Yes. Commercial accounts can be set up with Net 30 invoiced billing. Contact us to establish an account before your first delivery. We'll provide a written quote and confirmation for every job."},
+  {q:"What's the minimum order for a commercial delivery?",a:"One load (up to 6,200 gallons). There's no minimum order requirement, though commercial pricing starts at $400/load with volume discounts available on contracts of 6 or more loads."},
+  {q:"Why not just use my garden hose?",a:"A standard garden hose flows about 6 gallons per minute - that's 360 gallons per hour. A typical 15,000-gallon pool would take over 40 hours to fill. With our truck you get 6,200 gallons delivered in one shot. Most pools are swim-ready the same day we deliver."},
+  {q:"Where does the water come from?",a:"We source our water exclusively from local municipalities - the same treated water that comes out of your tap, meeting Indiana drinking water standards. We deliver it in a stainless steel, food-grade tank dedicated solely to water. We are actively pursuing IDEM potable water hauler certification, which places us in a higher standard category than general bulk water operators who may use multi-purpose tanks."},
+  {q:"Is the water safe to swim in right away?",a:"Yes. Because it's already treated municipal water, you can often swim the same day. You'll still want to balance your pH and chlorine levels, but you won't need to wait days like you would with untreated well water."},
+  {q:"Does your truck haul anything besides water?",a:"Never. Our stainless steel tank is dedicated to water only - it has never and will never carry fuel, fertilizer, chemicals, or any other substance. This is one reason we pursued a food-grade stainless tank rather than a standard mild steel bulk tank: it's a verifiable, physical commitment to water quality that general bulk operators can't match."},
+  {q:"Do I need to be home during the delivery?",a:"No. We fill pools all the time while customers are at work. We just need clear access to your pool and payment arrangements made in advance. We'll text you when we're on the way and when we're done."},
+  {q:"How do you get the water to the pool or site?",a:"We run hose from the truck to your destination - up to 300 feet of reach. We're careful around landscaping, flowerbeds, and fencing. Most residential and commercial setups are straightforward."},
+  {q:"How many loads will my pool need?",a:"Use the pool calculator above to get an estimate. Most residential inground pools need 2 to 5 loads depending on size. Our calculator breaks it down by shape and depth."},
+  {q:"When should I book?",a:"In peak season (April through August) we recommend booking at least a week out. For spring openings, earlier is better - April slots fill fast. Same-day availability exists but carries a +$75 surcharge."},
+  {q:"How do I pay?",a:"Residential: we accept cash, check, and all major credit cards. Payment is due upon completion of the final load. Commercial accounts can be invoiced Net 30. No payment is required to book online."}
+];
+var list=document.getElementById('faq-list');
+faqs.forEach(function(f,i){
+  var item=document.createElement('div');
+  item.style.cssText='border-bottom:1px solid var(--border);overflow:hidden';
+  item.innerHTML='<button onclick="toggleFaq('+i+',this)" style="width:100%;text-align:left;background:none;border:none;padding:20px 0;display:flex;justify-content:space-between;align-items:center;cursor:pointer;font-family:inherit;font-size:16px;font-weight:500;color:var(--navy)">'+f.q+'<svg id="faq-icon-'+i+'" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" style="flex-shrink:0;transition:transform 0.2s;color:var(--blue)"><polyline points="6 9 12 15 18 9"/></svg></button><div id="faq-ans-'+i+'" style="display:none;padding:0 0 20px;font-size:15px;color:var(--gray-500);line-height:1.7">'+f.a+'</div>';
+  list.appendChild(item);
+});
+function toggleFaq(i,btn){
+  var ans=document.getElementById('faq-ans-'+i);
+  var icon=document.getElementById('faq-icon-'+i);
+  var open=ans.style.display==='block';
+  document.querySelectorAll('[id^="faq-ans-"]').forEach(function(a){a.style.display='none'});
+  document.querySelectorAll('[id^="faq-icon-"]').forEach(function(ic){ic.style.transform='rotate(0deg)'});
+  if(!open){ans.style.display='block';icon.style.transform='rotate(180deg)';}
+}
+</script>
+
+<section class="booking-section" id="book">
+  <div class="booking-inner">
+    <div class="section-label" style="color:var(--water)">Ready to Book</div>
+    <div class="section-title">Schedule Your Delivery</div>
+    <p class="section-sub">Fill out the form and we'll reach out within the hour to confirm your window.</p>
+    <div class="booking-form">
+      <iframe src="https://api.vission.ai/widget/form/JBwWZcKhPnqlX34NZDE9" style="width:100%;height:763px;border:none;border-radius:3px" id="inline-JBwWZcKhPnqlX34NZDE9" data-layout="{'id':'INLINE'}" data-trigger-type="alwaysShow" data-trigger-value="" data-activation-type="alwaysActivated" data-activation-value="" data-deactivation-type="neverDeactivate" data-deactivation-value="" data-form-name="Book Delivery" data-height="763" data-layout-iframe-id="inline-JBwWZcKhPnqlX34NZDE9" data-form-id="JBwWZcKhPnqlX34NZDE9" title="Book Delivery"></iframe>
+      <script src="https://api.vission.ai/js/form_embed.js"></script>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-top">
+    <div>
+      <p class="footer-tagline">Fast, reliable bulk water delivery for construction sites, pools, ponds, and commercial operations across Hamilton and Boone Counties.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Commercial</h4>
+      <a href="#commercial">Get a Quote</a>
+      <a href="#commercial">Dust Control</a>
+      <a href="#commercial">Concrete &amp; Compaction</a>
+      <a href="#commercial">Hydrostatic Testing</a>
+    </div>
+    <div class="footer-col">
+      <h4>Residential</h4>
+      <a href="#services">Pool Fills</a>
+      <a href="#services">Hot Tub Fills</a>
+      <a href="#services">Pond Fills</a>
+      <a href="#estimator">Pool Calculator</a>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <a href="#">(317) 000-0000</a>
+      <a href="mailto:info@indybulkwater.com">info@indybulkwater.com</a>
+      <a href="#area">Service Area</a>
+      <a href="#book">Book Delivery</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p class="footer-copy">&copy; 2026 Indy Bulk Water LLC. All rights reserved.</p>
+    <p class="footer-phone">Call us: (317) 000-0000</p>
+  </div>
+</footer>
 
 <script>
 var estShape='rectangle';
@@ -452,7 +546,7 @@ function setShape(s,el){
 }
 function estUpdateFill(){
   var v=parseInt(document.getElementById('est-fillpct').value);
-  document.getElementById('est-fill-label').textContent=v===100?'100% &mdash; full pool':v+'% capacity';
+  document.getElementById('est-fill-label').textContent=v===100?'100% - full pool':v+'% capacity';
 }
 function estCalc(){
   var L=parseFloat(document.getElementById('est-length').value)||0;
@@ -463,8 +557,8 @@ function estCalc(){
   var avgDepth=(shallow+deep)/2;
   var sf={rectangle:1,oval:0.785,kidney:0.75,lshape:0.80}[estShape]||1;
   var gal=Math.round(L*W*avgDepth*7.48*sf*fillPct/100)*100;
-  var fullLoads=Math.floor(gal/4000);
-  var remainder=gal%4000;
+  var fullLoads=Math.floor(gal/6200);
+  var remainder=gal%6200;
   var totalLoads=fullLoads+(remainder>0?1:0);
   var cost=fullLoads*350+(remainder>0?(remainder<=2000?220:350):0);
   document.getElementById('est-gallons').textContent=gal.toLocaleString();
@@ -475,74 +569,24 @@ function estCalc(){
   for(var i=0;i<fullLoads;i++){
     var p=document.createElement('span');
     p.style.cssText='background:var(--blue);color:#fff;border-radius:20px;padding:4px 12px;font-size:12px;font-weight:500';
-    p.textContent='Load '+(i+1)+' - 4,000 gal';
+    p.textContent='Load '+(i+1)+' - 6,200 gal';
     bar.appendChild(p);
   }
   if(remainder>0){
     var p2=document.createElement('span');
     p2.style.cssText='background:var(--blue-light);color:var(--blue);border-radius:20px;padding:4px 12px;font-size:12px;font-weight:500';
-    p2.textContent='Load '+totalLoads+' &mdash; '+remainder.toLocaleString()+' gal';
+    p2.textContent='Load '+totalLoads+' - '+remainder.toLocaleString()+' gal';
     bar.appendChild(p2);
   }
-  document.getElementById('est-note').textContent=totalLoads>1?'Multi-load jobs scheduled same-day or across consecutive days depending on availability.':'Single-load fill &mdash; usually completed within 2 hours of scheduling.';
+  document.getElementById('est-note').textContent=totalLoads>1?'Multi-load jobs scheduled same-day or across consecutive days depending on availability.':'Single-load fill - usually completed within 2 hours of scheduling.';
 }
 estCalc();
-</script>
-
-<section class="booking-section" id="book">
-  <div class="booking-inner">
-    <div class="section-label" style="color:var(--water)">Ready to Book</div>
-    <div class="section-title">Schedule Your Delivery</div>
-    <p class="section-sub">Fill out the form and we'll reach out within the hour to confirm your window.</p>
-    <div class="booking-form">
-      <iframe
-        src="https://api.vission.ai/widget/form/JBwWZcKhPnqlX34NZDE9"
-        style="width:100%;height:763px;border:none;border-radius:3px"
-        id="inline-JBwWZcKhPnqlX34NZDE9"
-        data-layout="{'id':'INLINE'}"
-        data-trigger-type="alwaysShow"
-        data-trigger-value=""
-        data-activation-type="alwaysActivated"
-        data-activation-value=""
-        data-deactivation-type="neverDeactivate"
-        data-deactivation-value=""
-        data-form-name="Book Delivery"
-        data-height="763"
-        data-layout-iframe-id="inline-JBwWZcKhPnqlX34NZDE9"
-        data-form-id="JBwWZcKhPnqlX34NZDE9"
-        title="Book Delivery">
-      </iframe>
-      <script src="https://api.vission.ai/js/form_embed.js"></script>
-    </div>
-  </div>
-</section>
-
-<footer>
-  <div class="footer-top">
-    <div>
-      <p class="footer-tagline">Fast, clean bulk water delivery for pools, hot tubs, ponds, and commercial sites across Hamilton and Boone Counties.</p>
-    </div>
-    <div class="footer-col">
-      <h4>Services</h4>
-      <a href="#services">Pool Fills</a><a href="#services">Hot Tub Fills</a>
-      <a href="#services">Pond Fills</a><a href="#services">Commercial Water</a>
-    </div>
-    <div class="footer-col">
-      <h4>Contact</h4>
-      <a href="#">(317) 000-0000</a>
-      <a href="#"><span class="__cf_email__" data-cfemail="bad3d4dcd5fad3d4dec3d8cfd6d1cddbcedfc894d9d5d7">[email&#160;protected]</span></a>
-      <a href="#area">Service Area</a><a href="#book">Book Delivery</a>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <p class="footer-copy">&copy; 2026 Indy Bulk Water &mdash; Van Zee LLC. All rights reserved.</p>
-    <p class="footer-phone">Call us: (317) 000-0000</p>
-  </div>
-</footer>
-
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 
 document.querySelectorAll('a[href^="#"]').forEach(function(a){
   a.addEventListener('click',function(e){
     e.preventDefault();
-    var t=document.querySelector(this.getAttribute('
+    var t=document.querySelector(this.getAttribute('href'));
+    if(t)t.scrollIntoView({behavior:'smooth'});
+  });
+});
+</script>
