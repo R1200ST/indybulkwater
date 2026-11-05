@@ -233,7 +233,7 @@ footer{background:var(--gray-900);padding:48px 5% 28px}
         <div class="form-field"><label>Company / Contractor</label><input type="text" placeholder="ABC Construction"></div>
         <div class="form-field"><label>Contact Name</label><input type="text" placeholder="Your name"></div>
       </div>
-      <div class="form-field"><label>Phone</label><input type="tel" placeholder="(317) 000-0000"></div>
+      <div class="form-field"><label>Phone</label><input type="tel" placeholder="(317) 489-4647"></div>
       <div class="form-field">
         <label>Use Type</label>
         <select>
@@ -285,6 +285,12 @@ footer{background:var(--gray-900);padding:48px 5% 28px}
       <h3>Pond &amp; Water Features</h3>
       <p>Decorative ponds, retention basins, and landscape water features. New fills, seasonal top-offs, and drought recovery.</p>
       <span class="service-tag green">Boone Co. specialty</span>
+    </div>
+    <div class="service-card">
+      <div class="service-icon"><svg viewBox="0 0 24 24"><rect x="3" y="8" width="18" height="12" rx="2"/><path d="M7 8V6a5 5 0 0 1 10 0v2"/></svg></div>
+      <h3>Hot Tub &amp; Spa Fills</h3>
+      <p>Fast fills for spas and hot tubs. Calibrated flow to avoid overflow, in and out in under an hour.</p>
+      <span class="service-tag">Fast turnaround</span>
     </div>
   </div>
 </section>
@@ -352,27 +358,33 @@ footer{background:var(--gray-900);padding:48px 5% 28px}
 
 <section id="pricing" style="background:var(--gray-50)">
   <div style="text-align:center">
-    <div class="section-label">Pricing</div>
-    <div class="section-title">One Flat Trip Charge</div>
-    <p class="section-sub" style="margin:0 auto 40px">Every delivery is a full truck trip, so every trip is one price &mdash; whether you need 500 gallons or 6,200. Includes water, delivery, and up to 300ft of hose reach within 15 miles of Carmel.</p>
+    <div class="section-label">Transparent Pricing</div>
+    <div class="section-title">Simple, Flat-Rate Delivery</div>
+    <p class="section-sub" style="margin:0 auto 40px">No surprise fees. Price includes water, delivery, and up to 300ft of hose reach.</p>
   </div>
-  <div class="pricing-grid" style="max-width:760px;margin-left:auto;margin-right:auto">
+  <div class="pricing-grid">
+    <div class="price-card">
+      <div class="price-label">Standard</div><div class="price-name">Partial Fill</div>
+      <div class="price-desc">Top-offs, spa fills, or above-ground pools under 2,500 gal</div>
+      <div class="price-amount">$220 <span>/ load</span></div><div class="price-note">Up to 2,500 gallons</div>
+      <ul class="price-features"><li>Municipal treated water</li><li>Same-day available</li><li>No minimum order</li><li>SMS confirmation</li></ul>
+    </div>
     <div class="price-card featured">
-      <div class="popular-badge">Flat rate</div>
-      <div class="price-label">Residential</div><div class="price-name">Trip Charge</div>
-      <div class="price-desc">Pool fills, vinyl liner installs, spring openings, top-offs, ponds</div>
-      <div class="price-amount">$395 <span>/ trip</span></div><div class="price-note">Any volume up to 6,200 gallons</div>
+      <div class="popular-badge">Most popular</div>
+      <div class="price-label">Full Fill</div><div class="price-name">Pool Fill</div>
+      <div class="price-desc">Full inground pool fills, vinyl liner installs, spring openings</div>
+      <div class="price-amount">$350 <span>/ load</span></div><div class="price-note">Up to 6,200 gallons per load</div>
       <ul class="price-features"><li>Municipal treated water</li><li>Multi-load scheduling</li><li>Real-time driver tracking</li><li>Same-day available</li><li>SMS &amp; email confirmation</li></ul>
     </div>
     <div class="price-card commercial-card">
       <div class="commercial-badge">Commercial</div>
       <div class="price-label">Site Water</div><div class="price-name">Commercial Delivery</div>
-      <div class="price-desc">Construction, compaction, hydrostatic testing, potable and process water</div>
-      <div class="price-amount">Quote <span>/ project</span></div><div class="price-note">Priced by volume, distance, and water-quality requirements</div>
+      <div class="price-desc">Construction, dust control, compaction, hydrostatic testing</div>
+      <div class="price-amount">$400 <span>/ load</span></div><div class="price-note">Volume discounts on contract</div>
       <ul class="price-features"><li>Year-round availability</li><li>Multi-load contracts</li><li>Net 30 invoiced billing</li><li>Priority scheduling</li><li>Written quote provided</li></ul>
     </div>
   </div>
-  <p style="text-align:center;font-size:13px;color:var(--gray-500);margin-top:20px">Same price for any volume up to 6,200 gallons. Beyond 15 miles of Carmel: $4 per loaded mile. Emergency same-day surcharge: +$75. Most residential pools need 2-5 loads. Commercial volume pricing on 6+ load contracts.</p>
+  <p style="text-align:center;font-size:13px;color:var(--gray-500);margin-top:20px">Emergency same-day surcharge: +$75. Most residential pools require 2-5 loads. Commercial volume discounts on 6+ load contracts.</p>
 </section>
 
 <section id="estimator" style="background:var(--white);border-top:1px solid var(--border)">
@@ -412,7 +424,7 @@ footer{background:var(--gray-900);padding:48px 5% 28px}
       <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:20px">
         <div style="background:var(--blue-pale);border-radius:var(--radius);padding:14px 16px"><div style="font-size:11px;font-weight:600;color:var(--blue);text-transform:uppercase;letter-spacing:0.8px;margin-bottom:4px">Gallons needed</div><div style="font-size:22px;font-weight:600;color:var(--navy)" id="est-gallons">13,500</div></div>
         <div style="background:var(--blue-pale);border-radius:var(--radius);padding:14px 16px"><div style="font-size:11px;font-weight:600;color:var(--blue);text-transform:uppercase;letter-spacing:0.8px;margin-bottom:4px">Loads needed</div><div style="font-size:22px;font-weight:600;color:var(--navy)" id="est-loads">4</div></div>
-        <div style="background:var(--blue-pale);border-radius:var(--radius);padding:14px 16px"><div style="font-size:11px;font-weight:600;color:var(--blue);text-transform:uppercase;letter-spacing:0.8px;margin-bottom:4px">Est. cost</div><div style="font-size:22px;font-weight:600;color:var(--navy)" id="est-cost">$1,580</div></div>
+        <div style="background:var(--blue-pale);border-radius:var(--radius);padding:14px 16px"><div style="font-size:11px;font-weight:600;color:var(--blue);text-transform:uppercase;letter-spacing:0.8px;margin-bottom:4px">Est. cost</div><div style="font-size:22px;font-weight:600;color:var(--navy)" id="est-cost">$1,400</div></div>
       </div>
       <div style="margin-bottom:16px">
         <div style="font-size:12px;font-weight:500;color:var(--gray-700);margin-bottom:8px">Load breakdown</div>
@@ -420,7 +432,7 @@ footer{background:var(--gray-900);padding:48px 5% 28px}
       </div>
       <p id="est-note" style="font-size:12px;color:var(--gray-500);margin-bottom:16px;text-align:center"></p>
       <a href="#book" class="btn-primary" style="display:flex;justify-content:center;text-decoration:none;background:var(--blue);color:#fff">Book Your Delivery &rarr;</a>
-      <p style="font-size:11px;color:var(--gray-500);text-align:center;margin-top:8px">Estimates assume a standard tapered pool floor and delivery within 15 miles of Carmel. Actual volume may vary +/-10%; mileage beyond 15 miles is $4/loaded mile.</p>
+      <p style="font-size:11px;color:var(--gray-500);text-align:center;margin-top:8px">Estimates assume a standard tapered pool floor. Actual volume may vary +/-10%.</p>
     </div>
   </div>
 </section>
@@ -445,8 +457,7 @@ footer{background:var(--gray-900);padding:48px 5% 28px}
 var faqs=[
   {q:"Do you handle commercial and construction projects?",a:"Yes - commercial is a core part of what we do. We supply site water for dust control, concrete mixing, subgrade compaction, hydrostatic testing, and large-scale pond fills. We offer multi-load contracts, Net 30 invoiced billing, and priority scheduling for GCs, subs, and municipalities. Request a quote through the commercial form above and we'll respond within 2 business hours."},
   {q:"Can you invoice our company rather than requiring payment on delivery?",a:"Yes. Commercial accounts can be set up with Net 30 invoiced billing. Contact us to establish an account before your first delivery. We'll provide a written quote and confirmation for every job."},
-  {q:"What's the minimum order for a commercial delivery?",a:"One load (up to 6,200 gallons). Commercial work is quoted per project based on volume, distance, and water-quality requirements, with volume pricing on contracts of 6 or more loads."},
-  {q:"Why is a partial load the same price as a full load?",a:"Because the cost of a delivery is the trip, not the water. The truck, fuel, driver, and time are the same whether we deliver 500 gallons or 6,200. Every delivery is $395 within 15 miles of Carmel, so if you're on the fence about how much you need, fill up."},
+  {q:"What's the minimum order for a commercial delivery?",a:"One load (up to 6,200 gallons). There's no minimum order requirement, though commercial pricing starts at $400/load with volume discounts available on contracts of 6 or more loads."},
   {q:"Why not just use my garden hose?",a:"A standard garden hose flows about 6 gallons per minute - that's 360 gallons per hour. A typical 15,000-gallon pool would take over 40 hours to fill. With our truck you get 6,200 gallons delivered in one shot. Most pools are swim-ready the same day we deliver."},
   {q:"Where does the water come from?",a:"We source our water exclusively from local municipalities - the same treated water that comes out of your tap, meeting Indiana drinking water standards. We deliver it in a stainless steel, food-grade tank dedicated solely to water. We are actively pursuing IDEM potable water hauler certification, which places us in a higher standard category than general bulk water operators who may use multi-purpose tanks."},
   {q:"Is the water safe to swim in right away?",a:"Yes. Because it's already treated municipal water, you can often swim the same day. You'll still want to balance your pH and chlorine levels, but you won't need to wait days like you would with untreated well water."},
@@ -501,12 +512,13 @@ function toggleFaq(i,btn){
     <div class="footer-col">
       <h4>Residential</h4>
       <a href="#services">Pool Fills</a>
+      <a href="#services">Hot Tub Fills</a>
       <a href="#services">Pond Fills</a>
       <a href="#estimator">Pool Calculator</a>
     </div>
     <div class="footer-col">
       <h4>Contact</h4>
-      <a href="#">(317) 000-0000</a>
+      <a href="tel:+13174894647">(317) 489-4647</a>
       <a href="mailto:info@indybulkwater.com">info@indybulkwater.com</a>
       <a href="#area">Service Area</a>
       <a href="#book">Book Delivery</a>
@@ -514,7 +526,7 @@ function toggleFaq(i,btn){
   </div>
   <div class="footer-bottom">
     <p class="footer-copy">&copy; 2026 Indy Bulk Water LLC. All rights reserved.</p>
-    <p class="footer-phone">Call us: (317) 000-0000</p>
+    <p class="footer-phone">Call us: (317) 489-4647</p>
   </div>
 </footer>
 
@@ -548,7 +560,7 @@ function estCalc(){
   var fullLoads=Math.floor(gal/6200);
   var remainder=gal%6200;
   var totalLoads=fullLoads+(remainder>0?1:0);
-  var cost=totalLoads*395;
+  var cost=fullLoads*350+(remainder>0?(remainder<=2000?220:350):0);
   document.getElementById('est-gallons').textContent=gal.toLocaleString();
   document.getElementById('est-loads').textContent=totalLoads;
   document.getElementById('est-cost').textContent='$'+cost.toLocaleString();
